@@ -1,0 +1,21 @@
+{
+  "name": "plankoftheseus-site",
+  "compatibility_date": "2026-11-10",
+  "workers_dev": true,
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "./dist"
+  },
+  "routes": [
+    {
+      "pattern": "plankoftheseus.com",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.plankoftheseus.com",
+      "custom_domain": true
+    }
+  ]
+}
