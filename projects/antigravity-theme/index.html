@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>船板 Antigravity 美化+汉化补丁 (v6.0.3) — My Project · The Plank of Theseus</title>
+  <meta name="description" content="Google Antigravity 轻量级外观美化、2,210 条母语级汉化（中英一键双切）与本地只读 Token 统计补丁，内置莫兰迪 / 仿 Claude 暖白 / 双深色五段式预设，由 AI Agent 一键无损部署。" />
+  <link rel="canonical" href="https://plankoftheseus.com/projects/antigravity-theme/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://plankoftheseus.com/projects/antigravity-theme/" />
+  <meta property="og:title" content="船板 Antigravity 美化+汉化补丁 (v6.0.3) — My Project · The Plank of Theseus" />
+  <meta property="og:description" content="Google Antigravity 轻量级外观美化、2,210 条母语级汉化（中英一键双切）与本地只读 Token 统计补丁，内置莫兰迪 / 仿 Claude 暖白 / 双深色五段式预设，由 AI Agent 一键无损部署。" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/projects/projects.css" />
+</head>
+<body>
+  <div class="xuan-texture" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+      <filter id="xuan-fiber" x="0%" y="0%" width="100%" height="100%">
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.68 0.14"
+          numOctaves="4"
+          seed="17"
+          result="rawNoise" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0.08
+                  0 0 0 0 0.08
+                  0 0 0 0 0.08
+                  0 0 0 0.42 0"
+          in="rawNoise"
+          result="finePaper" />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#xuan-fiber)" />
+    </svg>
+  </div>
+
+  <div class="page-frame">
+    <header class="utility-bar">
+      <a href="/" class="seal-mark" aria-label="The Plank of Theseus">
+        <span class="cinnabar-seal" title="船板">船</span>
+        <span class="seal-caption">THE PLANK OF THESEUS</span>
+      </a>
+      <div class="utility-actions">
+        <a href="/projects/" class="nav-back"><span class="arrow-glyph">←</span> 返回工具集</a>
+        <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle Ink Mode">夜砚 · Ink</button>
+      </div>
+    </header>
+
+    <main>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">The Plank of Theseus</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="/projects/">My Project · 船板写作工具集</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>船板 Antigravity 美化+汉化补丁</span>
+      </nav>
+
+      <section class="detail-hero">
+        <div class="detail-kicker"><span class="badge badge--cinnabar">v6.0.3</span><span class="badge">Antigravity 2.35.1+</span><span class="badge">macOS / Windows / Linux</span><span class="badge">MIT</span></div>
+        <h1 class="detail-title">船板 Antigravity 美化+汉化补丁</h1>
+        <p class="tool-row-en" style="margin-bottom: 16px;">Antigravity Editorial Theme, CJK i18n &amp; Local Token Telemetry Patch</p>
+        <p class="detail-lead">面向 Google Antigravity 的轻量级外观、排版、汉化与本地只读统计增强补丁。专注于纯粹的界面审美与信息可读性优化，由 AI Agent 一键部署，支持热重载个性化定制与随时无损还原。</p>
+        <div class="detail-cta-row">
+          <a class="btn btn--primary" href="/projects/antigravity-theme/download/">进入专属资源下载页 <span class="arrow-glyph">→</span></a>
+          <a class="btn" href="https://github.com/Anarcadia/chuanban-antigravity-theme-patch" target="_blank" rel="noopener">GitHub · Anarcadia/chuanban-antigravity-theme-patch <span class="arrow-glyph">↗</span></a>
+          <a class="btn" href="https://github.com/Anarcadia/chuanban-antigravity-theme-patch/blob/main/SKILL.md" target="_blank" rel="noopener">SKILL.md（Agent 部署契约） <span class="arrow-glyph">↗</span></a><a class="btn" href="https://github.com/Anarcadia/chuanban-antigravity-theme-patch/blob/main/CHANGELOG.md" target="_blank" rel="noopener">CHANGELOG.md（更新日志） <span class="arrow-glyph">↗</span></a>
+          <a class="btn" href="https://www.feishu.cn/wiki/EQyqwJEqmi1LH3k11tzcmkMHnYd" target="_blank" rel="noopener">飞书文档版 <span class="arrow-glyph">↗</span></a>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>实机效果预览（点击图片可放大）</h2>
+        <div class="gallery-grid">
+          <figure class="gallery-figure">
+            <div class="gallery-mat" data-full="/assets/projects/antigravity/preview-morandi-workbench.webp" data-caption="1. 默认标准主界面：莫兰迪风格（MO）与上下文信息胶囊详情卡" title="点击放大查看高清实机图">
+              <img src="/assets/projects/antigravity/preview-morandi-workbench.webp" alt="1. 默认标准主界面：莫兰迪风格（MO）与上下文信息胶囊详情卡" loading="lazy" decoding="async" />
+            </div>
+            <figcaption class="gallery-caption">1. 默认标准主界面：莫兰迪风格（MO）与上下文信息胶囊详情卡</figcaption>
+          </figure>
+          <figure class="gallery-figure">
+            <div class="gallery-mat" data-full="/assets/projects/antigravity/preview-theme-lang-switcher.webp" data-caption="2. 外观与语言切换面板：五段式皮肤选择 + [ EN | 中文 ] 一键双切" title="点击放大查看高清实机图">
+              <img src="/assets/projects/antigravity/preview-theme-lang-switcher.webp" alt="2. 外观与语言切换面板：五段式皮肤选择 + [ EN | 中文 ] 一键双切" loading="lazy" decoding="async" />
+            </div>
+            <figcaption class="gallery-caption">2. 外观与语言切换面板：五段式皮肤选择 + [ EN | 中文 ] 一键双切</figcaption>
+          </figure>
+          <figure class="gallery-figure">
+            <div class="gallery-mat" data-full="/assets/projects/antigravity/preview-absolutely-workbench.webp" data-caption="3. Absolutely! 主题演示：仿 Claude 书卷暖白工作台与子 Agent 汉化副栏" title="点击放大查看高清实机图">
+              <img src="/assets/projects/antigravity/preview-absolutely-workbench.webp" alt="3. Absolutely! 主题演示：仿 Claude 书卷暖白工作台与子 Agent 汉化副栏" loading="lazy" decoding="async" />
+            </div>
+            <figcaption class="gallery-caption">3. Absolutely! 主题演示：仿 Claude 书卷暖白工作台与子 Agent 汉化副栏</figcaption>
+          </figure>
+          <figure class="gallery-figure">
+            <div class="gallery-mat" data-full="/assets/projects/antigravity/preview-dark-workbench.webp" data-caption="4. 夜间界面与代码审阅视图（支持 暖纸深色 / 深海冷碳 切换）" title="点击放大查看高清实机图">
+              <img src="/assets/projects/antigravity/preview-dark-workbench.webp" alt="4. 夜间界面与代码审阅视图（支持 暖纸深色 / 深海冷碳 切换）" loading="lazy" decoding="async" />
+            </div>
+            <figcaption class="gallery-caption">4. 夜间界面与代码审阅视图（支持 暖纸深色 / 深海冷碳 切换）</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>核心特性与设计细节</h2>
+        <ul class="feature-list">
+          <li class="feature-card">
+            <h3>多套打磨风格与系统日夜自动跟随</h3>
+            <p>内置莫兰迪古典矿物风格（默认）、仿 Claude 书卷暖白（Absolutely!）、温润书卷夜间与深海冷碳深色模式，支持独立「跟随系统」自动日夜配对，并可一键退回官方原版风格。</p>
+          </li>
+          <li class="feature-card">
+            <h3>2,210 条母语级汉化与中英双切</h3>
+            <p>覆盖主界面、设置项、编排器、Swarm 蜂群工作台与子 Agent 面板的自然中文汉化，严格隔离代码块、终端与文件名避免误翻；外观面板支持 [ EN | 中文 ] 一键切换。</p>
+          </li>
+          <li class="feature-card">
+            <h3>字体美化与活字微润墨特效</h3>
+            <p>精选书卷衬线长文、现代无衬线界面与人文等宽代码字体组合，在浅色纸面融入细腻微润墨柔化，消除中英文混排发虚与字重断层。</p>
+          </li>
+          <li class="feature-card">
+            <h3>极简上下文信息胶囊与 Token 统计</h3>
+            <p>输入框底栏内嵌低干扰状态胶囊，支持主窗口、分屏、支线与子 Agent 独立显示速率、首字延迟与上下文圆环；设置面板集成多维本地只读 Token 统计。</p>
+          </li>
+          <li class="feature-card">
+            <h3>纯粹克制与非侵入式低风险设计</h3>
+            <p>严格限定于纯前端视觉呈现与本地数据只读展示，不掺杂对话自动化、网络拦截或凭据读取，不修改客户端安装包与二进制签名，随时可无损卸载还原。</p>
+          </li>
+        </ul>
+      </section>
+      <section class="content-section">
+        <h2>五段式内置皮肤预设</h2>
+        <div class="table-wrap">
+          <table class="ink-table">
+            <thead><tr><th>按钮</th><th>预设名称</th><th>定位与氛围说明</th></tr></thead>
+            <tbody>
+              <tr><td>MO</td><td>莫兰迪 (morandi)</td><td>默认浅色：温润耐看的古典矿物灰暖纸基调，长时间读写零疲劳。</td></tr>
+              <tr><td>AB</td><td>Absolutely! (claude)</td><td>仿 Claude 书卷暖白：经典温暖纸面搭配陶土强调色，极简学术与长文气质。</td></tr>
+              <tr><td>暖夜</td><td>暖纸深色 (warm-dark)</td><td>温润书卷夜间：柔和暗纸底色配暖调字色与陶土点缀，适合夜间沉浸写作。</td></tr>
+              <tr><td>深色</td><td>深海冷碳 (onyx)</td><td>深海青黛暗底配石青点缀，冷静克制，适合代码审阅与暗光环境。</td></tr>
+              <tr><td>A</td><td>原版配色 (native)</td><td>一键旁路补丁配色与自定义字体，回归官方原貌同时保留汉化与统计可用。</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>安装与快速上手</h2>
+        <h3>新用户首次安装：复制引导词发给你的 AI Agent（推荐）</h3>
+        <p>环境要求 Node.js &gt;= 22.0.0（推荐 &gt;= 22.13.0）。必备字体支持脚本自动下载并注册；如终端网络受限，可先在「资源下载页」通过浏览器下载字体包后交给脚本安装。</p>
+        <div class="code-box">
+          <div class="code-box-head">
+            <span>AGENT PROMPT · 首次部署 v6.0.3</span>
+            <button class="copy-btn" type="button" data-copy-target="code-antigravity-theme-0">复制内容</button>
+          </div>
+          <pre id="code-antigravity-theme-0"><code>请帮我克隆 https://github.com/Anarcadia/chuanban-antigravity-theme-patch.git（或读取我已下载解压的补丁目录），先完整阅读仓库内的 SKILL.md，再按以下顺序部署并处理边缘情况：
+1. 若本机有 nvm / fnm / volta，优先切换至 Node &gt;= 22.13.0 执行命令；运行 node install.mjs doctor 检查 fonts.allRequiredInstalled 与 fonts.unregisteredWarning。
+2. 若缺少字体（或 Windows 提示有未写注册表的用户字体）：
+   - 若我本地已下载好字体目录或 .zip，直接执行 node install.mjs install-fonts --from &quot;&lt;字体目录或.zip路径&gt;&quot;；
+   - 若本地尚未下载，直接执行 node install.mjs install-fonts --auto-download（Windows 检出旧版 SuperTTC 请追加 --retire-super-ttc）；
+   - 若终端网络/代理受限，提示我通过资源下载页下载全部字体到同一目录后再运行 install-fonts --from（macOS 缺少更纱也可用 brew install --cask font-sarasa-gothic）。
+3. 运行 node install.mjs install 完成安装（默认启用 &quot;morandi&quot; 莫兰迪风格）。
+4. 若输出 cdpStatus 为 &quot;missing_opt_in_flag&quot; 且你当前正在 Antigravity 内部会话中，请勿强行重启自断会话，提示我空闲时运行 node ~/.gemini/antigravity/theme-patch/install.mjs relaunch（或手动重开客户端）。
+5. 端口就绪后运行 node install.mjs verify，确认 &quot;ok&quot;: true、&quot;hasStyle&quot;: true 且 fonts.allRequiredInstalled: true 即完成验收。</code></pre>
+        </div>
+        <h3>老用户无损升级至 v6.0.3</h3>
+        <p>升级自动备份旧版 core/ 内核并完整保留 ~/.gemini/antigravity/theme-patch/user/ 下的个人自定义字号、配色与词条覆盖。</p>
+        <div class="code-box">
+          <div class="code-box-head">
+            <span>AGENT PROMPT · 升级至 v6.0.3</span>
+            <button class="copy-btn" type="button" data-copy-target="code-antigravity-theme-1">复制内容</button>
+          </div>
+          <pre id="code-antigravity-theme-1"><code>请帮我拉取最新的 https://github.com/Anarcadia/chuanban-antigravity-theme-patch.git（或读取最新解压目录），阅读 SKILL.md 后直接运行 node install.mjs install 升级至 v6.0.3。若端口未开启且你正在 Antigravity 内部会话中，请提示我空闲时执行 relaunch，就绪后运行 node install.mjs verify 验收。</code></pre>
+        </div>
+        <div class="callout"><strong>开发红线与合规边界：</strong>本仓库 main 分支坚决不加入自动操控对话流、绕过配额、拦截网络请求、读取 OAuth 凭据或修改客户端二进制签名的功能。本项目为独立非官方社区视觉增强补丁，与 Google 无关，随时可运行 <code>node install.mjs uninstall</code> 彻底还原。</div>
+      </section>
+
+      <section class="content-section">
+        <h2>获取安装包与配套字体</h2>
+        <p>所有安装包、字体拆分包及多源高速分流（GitHub Releases / Google Drive / 飞书国内免代理）均集中整理在专属下载页。</p>
+        <div class="detail-cta-row">
+          <a class="btn btn--cinnabar" href="/projects/antigravity-theme/download/">打开 船板 Antigravity 美化+汉化补丁 资源下载页 <span class="arrow-glyph">→</span></a>
+          <a class="btn" href="https://www.feishu.cn/wiki/V2lbwB8ykiLLXrkzY41cXjQ1nXc" target="_blank" rel="noopener">飞书国内免代理分流页 <span class="arrow-glyph">↗</span></a>
+        </div>
+      </section>
+
+      <div class="ref-strip">
+        <a href="/projects/" class="ref-link"><span class="arrow-glyph">←</span> 返回全部写作工具</a>
+        <a href="/projects/obsidian-notion-hc/" class="ref-link">下一款：仿 Notion Obsidian 高对比浅/暗主题 <span class="arrow-glyph">→</span></a>
+      </div>
+    </main>
+
+    <footer class="foot">
+      <span>© Chuanban · 忒修斯的船板</span>
+      <span>Monochrome Ink &amp; Raw Xuan</span>
+    </footer>
+  </div>
+
+  <script src="/assets/projects/projects.js"></script>
+</body>
+</html>

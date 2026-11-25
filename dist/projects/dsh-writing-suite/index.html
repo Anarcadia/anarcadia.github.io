@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DSH 写作主题综合包 (v0.1.2 + v0.3.0) — My Project · The Plank of Theseus</title>
+  <meta name="description" content="DeepSeek Harness 二合一写作工作台：暖纸皮肤内嵌三款 Anthropic 可变字体开箱即用；纯净写作模式清零编程提示词、收束为写作读写/整理/Word 双向桥工具集。" />
+  <link rel="canonical" href="https://plankoftheseus.com/projects/dsh-writing-suite/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://plankoftheseus.com/projects/dsh-writing-suite/" />
+  <meta property="og:title" content="DSH 写作主题综合包 (v0.1.2 + v0.3.0) — My Project · The Plank of Theseus" />
+  <meta property="og:description" content="DeepSeek Harness 二合一写作工作台：暖纸皮肤内嵌三款 Anthropic 可变字体开箱即用；纯净写作模式清零编程提示词、收束为写作读写/整理/Word 双向桥工具集。" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/projects/projects.css" />
+</head>
+<body>
+  <div class="xuan-texture" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+      <filter id="xuan-fiber" x="0%" y="0%" width="100%" height="100%">
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.68 0.14"
+          numOctaves="4"
+          seed="17"
+          result="rawNoise" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0.08
+                  0 0 0 0 0.08
+                  0 0 0 0 0.08
+                  0 0 0 0.42 0"
+          in="rawNoise"
+          result="finePaper" />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#xuan-fiber)" />
+    </svg>
+  </div>
+
+  <div class="page-frame">
+    <header class="utility-bar">
+      <a href="/" class="seal-mark" aria-label="The Plank of Theseus">
+        <span class="cinnabar-seal" title="船板">船</span>
+        <span class="seal-caption">THE PLANK OF THESEUS</span>
+      </a>
+      <div class="utility-actions">
+        <a href="/projects/" class="nav-back"><span class="arrow-glyph">←</span> 返回工具集</a>
+        <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle Ink Mode">夜砚 · Ink</button>
+      </div>
+    </header>
+
+    <main>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">The Plank of Theseus</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="/projects/">My Project · 船板写作工具集</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>DSH 写作主题综合包</span>
+      </nav>
+
+      <section class="detail-hero">
+        <div class="detail-kicker"><span class="badge badge--cinnabar">theme v0.1.2</span><span class="badge">writingset v0.3.0</span><span class="badge">DeepSeek Harness</span><span class="badge">二合一插件套件</span></div>
+        <h1 class="detail-title">DSH 写作主题综合包</h1>
+        <p class="tool-row-en" style="margin-bottom: 16px;">DeepSeek Harness Warm-Paper Theme (v0.1.2) + Pure Writing Mode (v0.3.0)</p>
+        <p class="detail-lead">为 DeepSeek Harness (DSH) 打造的「沉浸写作内核 + 仿 Claude Desktop 暖纸阅读皮肤」二合一组合套件。两个插件既可一键组合安装，也可各自独立启停、随时热切换恢复官方原貌。</p>
+        <div class="detail-cta-row">
+          <a class="btn btn--primary" href="/projects/dsh-writing-suite/download/">进入专属资源下载页 <span class="arrow-glyph">→</span></a>
+          <a class="btn" href="https://github.com/Anarcadia/chuanban-dsh-theme" target="_blank" rel="noopener">GitHub · Anarcadia/chuanban-dsh-theme <span class="arrow-glyph">↗</span></a>
+          <a class="btn" href="https://github.com/Anarcadia/chuanban-dsh-writingset" target="_blank" rel="noopener">纯净写作模式仓库 (chuanban-dsh-writingset) <span class="arrow-glyph">↗</span></a>
+          <a class="btn" href="https://www.feishu.cn/wiki/SycGwfprLiEeHZkOyw0cNXEYnCg" target="_blank" rel="noopener">飞书文档版 <span class="arrow-glyph">↗</span></a>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>实机效果预览（点击图片可放大）</h2>
+        <div class="gallery-grid">
+          <figure class="gallery-figure">
+            <div class="gallery-mat" data-full="/assets/projects/dsh-writing/screenshot-preview.webp" data-caption="1. 暖纸阅读皮肤主界面（chuanban-dsh-theme · 三级暖纸色阶与内嵌可变字体）" title="点击放大查看高清实机图">
+              <img src="/assets/projects/dsh-writing/screenshot-preview.webp" alt="1. 暖纸阅读皮肤主界面（chuanban-dsh-theme · 三级暖纸色阶与内嵌可变字体）" loading="lazy" decoding="async" />
+            </div>
+            <figcaption class="gallery-caption">1. 暖纸阅读皮肤主界面（chuanban-dsh-theme · 三级暖纸色阶与内嵌可变字体）</figcaption>
+          </figure>
+          <figure class="gallery-figure">
+            <div class="gallery-mat" data-full="/assets/projects/dsh-writing/screenshot-session.webp" data-caption="2. 纯净写作协作模式 + 暖纸皮肤联动实机效果" title="点击放大查看高清实机图">
+              <img src="/assets/projects/dsh-writing/screenshot-session.webp" alt="2. 纯净写作协作模式 + 暖纸皮肤联动实机效果" loading="lazy" decoding="async" />
+            </div>
+            <figcaption class="gallery-caption">2. 纯净写作协作模式 + 暖纸皮肤联动实机效果</figcaption>
+          </figure>
+          <figure class="gallery-figure">
+            <div class="gallery-mat" data-full="/assets/projects/dsh-writing/screenshot-settings.webp" data-caption="3. 写作模式后台设置面板（四套沉浸预设与工作区文档注入开关）" title="点击放大查看高清实机图">
+              <img src="/assets/projects/dsh-writing/screenshot-settings.webp" alt="3. 写作模式后台设置面板（四套沉浸预设与工作区文档注入开关）" loading="lazy" decoding="async" />
+            </div>
+            <figcaption class="gallery-caption">3. 写作模式后台设置面板（四套沉浸预设与工作区文档注入开关）</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>核心特性与设计细节</h2>
+        <ul class="feature-list">
+          <li class="feature-card">
+            <h3>暖纸皮肤：三级暖纸色阶与零轮询注入</h3>
+            <p>燕麦暖灰侧栏 (#F1EEE7) ↔ 暖白纸主阅读区 (#FBF9F5) ↔ 陶土暖光聚焦输入卡 (#FFFFFF)，通过官方 ctx.theme.overrideTokens 一次性注入 80 个设计 Token，静止与流式对话零轮询开销。</p>
+          </li>
+          <li class="feature-card">
+            <h3>暖纸皮肤：内嵌三款 Anthropic 可变字体</h3>
+            <p>自 v0.1.1 起通过 WOFF2 Base64 内嵌 Anthropic Sans / Serif / Mono Web（wght 300..800），macOS 与 Windows 装完即刻呈现原汁原味西文排版，免手动装西文字体。</p>
+          </li>
+          <li class="feature-card">
+            <h3>纯净写作模式：首轮直降 80%+ Token 消耗</h3>
+            <p>彻底砍掉 DSH 原生编程提示词与冗余工程工具（零 Shell 命令执行通道），首轮系统输入仅约 1,196 tokens，告别 AI 写小说时的“程序员肌肉记忆”。</p>
+          </li>
+          <li class="feature-card">
+            <h3>纯净写作模式：写作者专属工具集与 Word 双向桥</h3>
+            <p>收束为基础读写（read/write/edit）、只读检索（glob/grep）、安全可恢复文件整理（copy/move/trash/stat）与零依赖 Word 稿件双向桥（docx ↔ md），叠加三层提示词积木。</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="content-section">
+        <h2>安装与快速上手</h2>
+        <h3>方式 A：DSH Desktop 桌面端在线一键安装（推荐）</h3>
+        <p>打开 DSH 桌面端「设置 → 插件」，依次粘贴下方两个 GitHub Release 最新直链安装即可；关闭开关可随时热切回官方原皮。</p>
+        <div class="code-box">
+          <div class="code-box-head">
+            <span>DSH DESKTOP · 插件安装 URL</span>
+            <button class="copy-btn" type="button" data-copy-target="code-dsh-writing-suite-0">复制内容</button>
+          </div>
+          <pre id="code-dsh-writing-suite-0"><code>https://github.com/Anarcadia/chuanban-dsh-theme/releases/latest/download/chuanban-dsh-theme.tgz
+https://github.com/Anarcadia/chuanban-dsh-writingset/releases/latest/download/chuanban-dsh-writingset.tgz</code></pre>
+        </div>
+        <h3>方式 B：DSH Web / CLI 命令行一条命令全装</h3>
+        <p>使用提示：① 建议将 DSH 外观模式固定为浅色（Light）；② 若此前手动填过自定义字体名，请清空恢复默认以免覆盖内嵌三层字体栈。</p>
+        <div class="code-box">
+          <div class="code-box-head">
+            <span>DSH CLI · 一键安装双插件</span>
+            <button class="copy-btn" type="button" data-copy-target="code-dsh-writing-suite-1">复制内容</button>
+          </div>
+          <pre id="code-dsh-writing-suite-1"><code>dsh plugin --profile web add \
+  https://github.com/Anarcadia/chuanban-dsh-writingset/releases/latest/download/chuanban-dsh-writingset.tgz \
+  https://github.com/Anarcadia/chuanban-dsh-theme/releases/latest/download/chuanban-dsh-theme.tgz</code></pre>
+        </div>
+        <div class="callout"><strong>兼容提示：</strong>写作模式支持可选叠加工作区 <code>AGENTS.md</code> / <code>CLAUDE.md</code>，不与本地 Skill 冲突；建议不要与其他改写初始系统提示词的写作插件同时开启。</div>
+      </section>
+
+      <section class="content-section">
+        <h2>获取安装包与配套字体</h2>
+        <p>所有安装包、字体拆分包及多源高速分流（GitHub Releases / Google Drive / 飞书国内免代理）均集中整理在专属下载页。</p>
+        <div class="detail-cta-row">
+          <a class="btn btn--cinnabar" href="/projects/dsh-writing-suite/download/">打开 DSH 写作主题综合包 资源下载页 <span class="arrow-glyph">→</span></a>
+          <a class="btn" href="https://www.feishu.cn/wiki/P8OnwniD4ice1FkETAxc0j6Vneg" target="_blank" rel="noopener">飞书国内免代理分流页 <span class="arrow-glyph">↗</span></a>
+        </div>
+      </section>
+
+      <div class="ref-strip">
+        <a href="/projects/obsidian-notion-hc/" class="ref-link"><span class="arrow-glyph">←</span> 上一款：仿 Notion Obsidian 高对比浅/暗主题</a>
+        <a href="/projects/obsidian-chuanban/" class="ref-link">下一款：书卷风 Obsidian 主题 <span class="arrow-glyph">→</span></a>
+      </div>
+    </main>
+
+    <footer class="foot">
+      <span>© Chuanban · 忒修斯的船板</span>
+      <span>Monochrome Ink &amp; Raw Xuan</span>
+    </footer>
+  </div>
+
+  <script src="/assets/projects/projects.js"></script>
+</body>
+</html>

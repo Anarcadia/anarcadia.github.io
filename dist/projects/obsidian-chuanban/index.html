@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>书卷风 Obsidian 主题 (v1.0.4 / 全装套件) — My Project · The Plank of Theseus</title>
+  <meta name="description" content="暖白象牙 × 燕麦纸感长文写作皮肤，配陶土强调色与高密度悬浮预览卡。简装版可在 Obsidian 官方商店搜 chuanban 直接安装；下载页提供含切换插件与全套字体的离线全装版。" />
+  <link rel="canonical" href="https://plankoftheseus.com/projects/obsidian-chuanban/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://plankoftheseus.com/projects/obsidian-chuanban/" />
+  <meta property="og:title" content="书卷风 Obsidian 主题 (v1.0.4 / 全装套件) — My Project · The Plank of Theseus" />
+  <meta property="og:description" content="暖白象牙 × 燕麦纸感长文写作皮肤，配陶土强调色与高密度悬浮预览卡。简装版可在 Obsidian 官方商店搜 chuanban 直接安装；下载页提供含切换插件与全套字体的离线全装版。" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/projects/projects.css" />
+</head>
+<body>
+  <div class="xuan-texture" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+      <filter id="xuan-fiber" x="0%" y="0%" width="100%" height="100%">
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.68 0.14"
+          numOctaves="4"
+          seed="17"
+          result="rawNoise" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0.08
+                  0 0 0 0 0.08
+                  0 0 0 0 0.08
+                  0 0 0 0.42 0"
+          in="rawNoise"
+          result="finePaper" />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#xuan-fiber)" />
+    </svg>
+  </div>
+
+  <div class="page-frame">
+    <header class="utility-bar">
+      <a href="/" class="seal-mark" aria-label="The Plank of Theseus">
+        <span class="cinnabar-seal" title="船板">船</span>
+        <span class="seal-caption">THE PLANK OF THESEUS</span>
+      </a>
+      <div class="utility-actions">
+        <a href="/projects/" class="nav-back"><span class="arrow-glyph">←</span> 返回工具集</a>
+        <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle Ink Mode">夜砚 · Ink</button>
+      </div>
+    </header>
+
+    <main>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">The Plank of Theseus</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="/projects/">My Project · 船板写作工具集</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>书卷风 Obsidian 主题</span>
+      </nav>
+
+      <section class="detail-hero">
+        <div class="detail-kicker"><span class="badge badge--cinnabar">官方商店 v1.0.4</span><span class="badge">全装套件 v1.0.0</span><span class="badge">Obsidian</span><span class="badge">双排版预设</span></div>
+        <h1 class="detail-title">书卷风 Obsidian 主题</h1>
+        <p class="tool-row-en" style="margin-bottom: 16px;">Warm Ivory &amp; Oatmeal Literary Theme (Official Lite v1.0.4 &amp; Full Suite)</p>
+        <p class="detail-lead">专为小说作者、专栏作家与深度长文写作者打磨的暖白象牙 × 燕麦纸感书卷风 Obsidian 主题，融合微暖纸面、陶土强调色、活字微润墨质感与固定高信息量悬浮预览卡。</p>
+        <div class="detail-cta-row">
+          <a class="btn btn--primary" href="/projects/obsidian-chuanban/download/">进入专属资源下载页 <span class="arrow-glyph">→</span></a>
+          <a class="btn" href="https://github.com/Anarcadia/obsidian-chuanban-theme" target="_blank" rel="noopener">GitHub · Anarcadia/obsidian-chuanban-theme <span class="arrow-glyph">↗</span></a>
+          <a class="btn" href="https://community.obsidian.md/themes/chuanban" target="_blank" rel="noopener">Obsidian 官方商店 (chuanban) <span class="arrow-glyph">↗</span></a><a class="btn" href="https://github.com/Anarcadia/obsidian-chuanban-suite" target="_blank" rel="noopener">全功能套件仓库 (obsidian-chuanban-suite) <span class="arrow-glyph">↗</span></a>
+          <a class="btn" href="https://www.feishu.cn/wiki/FY2twgUcNid5fTkhyJNc1e9gnYd" target="_blank" rel="noopener">飞书文档版 <span class="arrow-glyph">↗</span></a>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>实机效果预览（点击图片可放大）</h2>
+        <div class="gallery-grid gallery-grid--single">
+          <figure class="gallery-figure">
+            <div class="gallery-mat" data-full="/assets/projects/chuanban-obsidian/screenshot.webp" data-caption="书卷风 Obsidian 主题实机效果：暖白象牙纸面、燕麦侧栏与高密度悬浮预览卡" title="点击放大查看高清实机图">
+              <img src="/assets/projects/chuanban-obsidian/screenshot.webp" alt="书卷风 Obsidian 主题实机效果：暖白象牙纸面、燕麦侧栏与高密度悬浮预览卡" loading="lazy" decoding="async" />
+            </div>
+            <figcaption class="gallery-caption">书卷风 Obsidian 主题实机效果：暖白象牙纸面、燕麦侧栏与高密度悬浮预览卡</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>核心特性与设计细节</h2>
+        <ul class="feature-list">
+          <li class="feature-card">
+            <h3>暖白象牙与燕麦纸感色系</h3>
+            <p>主阅读画布 #FCFCFB 消除冷白刺眼感，燕麦暖灰侧栏 #F7F5F0 搭配 #ECE9E1 激活胶囊、陶土强调色 #D97757、鼠尾草绿划词选区与琥珀暖黄高亮。</p>
+          </li>
+          <li class="feature-card">
+            <h3>双排版预设一键切换</h3>
+            <p>内置「更纱打字机体（行高 1.78 + 0.25px 微润墨柔化）」与「经典书卷宋体（Songti SC 全角方块排布，行高 1.68）」，全装版附带左侧栏书本图标一键秒切插件。</p>
+          </li>
+          <li class="feature-card">
+            <h3>解耦式高密度悬浮预览卡</h3>
+            <p>锁定 13px / 1.52 行高与 440×360px 视口，自动隐藏 YAML 属性区；全装版附带 page-preview.json 实现左侧文件列表无修饰键悬停即见正文。</p>
+          </li>
+          <li class="feature-card">
+            <h3>全平台细节打磨 (v1.0.4)</h3>
+            <p>修复 Windows 裸机退化细宋体问题，全面打通 Obsidian 原生字体选择器，完整适配 Windows / Linux / macOS 隐藏标题栏窗口按钮安全区。</p>
+          </li>
+        </ul>
+      </section>
+      <section class="content-section">
+        <h2>官方主题商店「简装版」 vs 船板「全装套件版」核心区别</h2>
+        <div class="table-wrap">
+          <table class="ink-table">
+            <thead><tr><th>对比维度</th><th>官方商店简装版（搜 chuanban）</th><th>船板全功能全装套件（见资源下载页）</th></tr></thead>
+            <tbody>
+              <tr><td>包含内容</td><td>官方市场合规纯 CSS 主题（不含插件与专有字体）</td><td>主题本体 + 一键切换插件 + 5 款 Anthropic 字体 + 预览配置 + 自动安装脚本</td></tr>
+              <tr><td>西文字体表现</td><td>开源 / 系统字体回退（Inter / SF Pro / JetBrains Mono）</td><td>内置 5 款 Anthropic Sans / Serif / Mono 原厂 .ttf，脚本离线注册</td></tr>
+              <tr><td>双排版切换</td><td>通过 Style Settings 或单篇 YAML 写入 cssclasses</td><td>内置 chuanban-preset-switcher 插件，左侧栏书本图标一键秒切</td></tr>
+              <tr><td>悬浮预览卡</td><td>包含基础样式（按住 Cmd/Ctrl 悬停触发）</td><td>附带 page-preview.json，左侧文件列表无修饰键直接悬停预览</td></tr>
+              <tr><td>部署门槛</td><td>Obsidian 内点击安装，10 秒开箱</td><td>解压后丢给本地 AI 助手或运行 python3 install_auto.py 自动无损激活</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>安装与快速上手</h2>
+        <h3>极简体验：Obsidian 官方商店 10 秒安装（简装版）</h3>
+        <p>如果只想先快速体验暖纸视觉，直接在 Obsidian 内搜索安装即可；需要全套插件与原厂字体请前往「资源下载页」获取全装套件。</p>
+        <div class="code-box">
+          <div class="code-box-head">
+            <span>OBSIDIAN STORE · 官方简装版安装路径</span>
+            <button class="copy-btn" type="button" data-copy-target="code-obsidian-chuanban-0">复制内容</button>
+          </div>
+          <pre id="code-obsidian-chuanban-0"><code>1. 打开 Obsidian → 设置 (Settings) → 外观 (Appearance) → 主题 (Themes) → 管理 (Manage)
+2. 搜索：chuanban → 点击「安装并使用」
+3. 如需在简装版切换「更纱打字机体 ⇄ 经典书卷宋体」，可安装 Style Settings 插件进入 chuanban → Typography Preset，或在笔记 Front Matter 写入：
+   cssclasses: [preset-songti-serif]</code></pre>
+        </div>
+        <div class="callout"><strong>全装版一键无损激活：</strong>全装套件内置 <code>install_auto.py</code> 与《给 AI 助手看的零门槛一键安装引导》，安装前自动备份原有配置，不会覆盖你的个人笔记与插件设置。</div>
+      </section>
+
+      <section class="content-section">
+        <h2>获取安装包与配套字体</h2>
+        <p>所有安装包、字体拆分包及多源高速分流（GitHub Releases / Google Drive / 飞书国内免代理）均集中整理在专属下载页。</p>
+        <div class="detail-cta-row">
+          <a class="btn btn--cinnabar" href="/projects/obsidian-chuanban/download/">打开 书卷风 Obsidian 主题 资源下载页 <span class="arrow-glyph">→</span></a>
+          <a class="btn" href="https://www.feishu.cn/wiki/JrfuwEtziigNMskRLFIcpNYJnJg" target="_blank" rel="noopener">飞书国内免代理分流页 <span class="arrow-glyph">↗</span></a>
+        </div>
+      </section>
+
+      <div class="ref-strip">
+        <a href="/projects/dsh-writing-suite/" class="ref-link"><span class="arrow-glyph">←</span> 上一款：DSH 写作主题综合包</a>
+        <a href="/projects/obsidian-chuanban-green/" class="ref-link">下一款：松绿记事本 · Obsidian 主题 <span class="arrow-glyph">→</span></a>
+      </div>
+    </main>
+
+    <footer class="foot">
+      <span>© Chuanban · 忒修斯的船板</span>
+      <span>Monochrome Ink &amp; Raw Xuan</span>
+    </footer>
+  </div>
+
+  <script src="/assets/projects/projects.js"></script>
+</body>
+</html>
