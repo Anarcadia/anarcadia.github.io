@@ -73,6 +73,10 @@
       --rule-hover: #0E0E0E;
       --cinnabar: #9B2C23;
       --texture-opacity: 0.055;
+      --frame-mat: #FFFFFF;
+      --frame-border: #D2D2D2;
+      --frame-inner: rgba(0, 0, 0, 0.12);
+      --frame-shadow: 0 12px 30px rgba(0, 0, 0, 0.065), 0 1px 3px rgba(0, 0, 0, 0.04);
 
       /* Unified Single Serif Skeleton */
       --font-serif: "Cormorant Garamond", "Huiwen-mincho", "Noto Serif SC", "Songti SC", "STSong", Georgia, serif;
@@ -93,6 +97,10 @@
       --rule-hover: #F2F2F2;
       --cinnabar: #B83A2F;
       --texture-opacity: 0.045;
+      --frame-mat: #171717;
+      --frame-border: #323232;
+      --frame-inner: rgba(255, 255, 255, 0.09);
+      --frame-shadow: 0 14px 34px rgba(0, 0, 0, 0.48);
     }
 
     * {
@@ -159,7 +167,7 @@
       max-width: 1240px;
       min-height: 100vh;
       margin: 0 auto;
-      padding: 44px 56px 40px;
+      padding: 36px 56px 32px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -224,7 +232,7 @@
        ZONE 1 · MASTHEAD BANNER (Oversized Typographic Hero)
        ============================================================ */
     .zone-masthead {
-      padding: 9vh 0 8vh;
+      padding: 6.5vh 0 5.8vh;
       border-bottom: 1.5px solid var(--rule-strong);
       display: grid;
       grid-template-columns: 1fr auto;
@@ -265,35 +273,41 @@
     }
 
     /* ============================================================
-       ZONE 2 · STATEMENT & BRIEF (Asymmetric Two-Column Band)
+       ZONE 2 · STATEMENT & PORTRAIT FRAME (Asymmetric Two-Column Band)
        ============================================================ */
     .zone-statement {
-      padding: 8.5vh 0;
+      padding: 5.8vh 0;
       border-bottom: 1px solid var(--rule-line);
       display: grid;
-      grid-template-columns: 260px 1fr;
-      gap: 48px;
-      align-items: start;
+      grid-template-columns: 248px 1fr;
+      gap: 56px;
+      align-items: center;
     }
 
-    .zone-label {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      padding-top: 8px;
+    .portrait-frame {
+      width: 100%;
+      max-width: 248px;
     }
 
-    .zone-num {
-      font-family: var(--font-num);
-      font-size: 0.74rem;
-      letter-spacing: 0.16em;
-      color: var(--ink-muted);
+    .portrait-mat {
+      padding: 11px;
+      background-color: var(--frame-mat);
+      border: 1px solid var(--frame-border);
+      box-shadow: var(--frame-shadow);
+      transition: border-color 0.35s ease, box-shadow 0.35s ease, background-color 0.4s ease;
     }
 
-    .zone-tag {
-      font-size: 0.96rem;
-      letter-spacing: 0.22em;
-      color: var(--ink-mid);
+    .portrait-mat:hover {
+      border-color: var(--rule-hover);
+    }
+
+    .portrait-mat img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border: 1px solid var(--frame-inner);
     }
 
     .statement-body {
@@ -343,7 +357,7 @@
        ZONE 3 · THREE-COLUMN INDEX DIRECTORY (Bottom Screen Grid)
        ============================================================ */
     .zone-links {
-      padding: 6vh 0 5vh;
+      padding: 4.2vh 0 3.8vh;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
     }
@@ -351,12 +365,12 @@
     .link-card {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: center;
       text-decoration: none;
       color: inherit;
-      padding: 12px 32px 16px 0;
+      padding: 16px 32px 16px 0;
       border-right: 1px solid var(--rule-line);
-      min-height: 132px;
+      min-height: 100px;
       transition: opacity 0.25s ease;
     }
 
@@ -370,23 +384,20 @@
       border-right: none;
     }
 
-    .link-top {
+    .link-head {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      margin-bottom: 22px;
-    }
-
-    .link-index {
-      font-family: var(--font-num);
-      font-size: 0.74rem;
-      letter-spacing: 0.14em;
-      color: var(--ink-muted);
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 8px;
     }
 
     .link-arrow {
-      font-size: 1.05rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 1rem;
+      line-height: 1;
       color: var(--ink-muted);
+      flex-shrink: 0;
       transition: transform 0.25s ease, color 0.25s ease;
     }
 
@@ -395,7 +406,6 @@
       font-weight: 500;
       line-height: 1.25;
       color: var(--ink-black);
-      margin-bottom: 8px;
       transition: color 0.25s ease;
     }
 
@@ -408,6 +418,11 @@
 
     .link-card:hover .link-arrow {
       transform: translate(3px, -3px);
+      color: var(--cinnabar);
+    }
+
+    .link-card:hover .link-arrow-internal {
+      transform: translateX(4px);
       color: var(--cinnabar);
     }
 
@@ -468,15 +483,16 @@
 
       .zone-statement {
         grid-template-columns: 1fr;
-        gap: 18px;
+        gap: 28px;
         padding: 36px 0;
       }
 
-      .zone-label {
-        flex-direction: row;
-        align-items: baseline;
-        gap: 12px;
-        padding-top: 0;
+      .portrait-frame {
+        max-width: 210px;
+      }
+
+      .portrait-mat {
+        padding: 9px;
       }
 
       .manifesto-en {
@@ -512,8 +528,8 @@
         border-bottom: none;
       }
 
-      .link-top {
-        margin-bottom: 10px;
+      .link-head {
+        margin-bottom: 6px;
       }
 
       .link-title {
@@ -573,12 +589,20 @@
         </div>
       </section>
 
-      <!-- ZONE 2: Core Bilingual Statement & Concise Bio -->
+      <!-- ZONE 2: Portrait Frame & Core Bilingual Statement -->
       <section class="zone-statement" aria-label="Manifesto">
-        <div class="zone-label">
-          <span class="zone-num">01 / MANIFESTO</span>
-          <span class="zone-tag">立意</span>
-        </div>
+        <figure class="portrait-frame">
+          <div class="portrait-mat">
+            <img
+              src="assets/portrait.webp"
+              alt="Monochrome portrait of Chuanban with a parrot"
+              width="864"
+              height="1152"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+        </figure>
         <div class="statement-body">
           <p class="manifesto-en">
             “When AI replaces every part of the ship, what is the unreplaceable plank of a story?”
@@ -597,36 +621,27 @@
       <!-- ZONE 3: Three-Column Bottom Index -->
       <nav class="zone-links" aria-label="Primary Channels">
         <a class="link-card" href="https://plankoftheseus.substack.com" target="_blank" rel="noopener">
-          <div class="link-top">
-            <span class="link-index">01 · NEWSLETTER</span>
-            <span class="link-arrow">↗</span>
-          </div>
-          <div>
+          <div class="link-head">
             <h2 class="link-title">Substack &amp; Contact Me</h2>
-            <p class="link-desc">英文&amp;日文长信 跨文化交流</p>
+            <span class="link-arrow" aria-hidden="true">↗</span>
           </div>
+          <p class="link-desc">英文&amp;日文长信 跨文化交流</p>
         </a>
 
         <a class="link-card" href="https://chuanban.cc" target="_blank" rel="noopener">
-          <div class="link-top">
-            <span class="link-index">02 · ARCHIVE</span>
-            <span class="link-arrow">↗</span>
-          </div>
-          <div>
+          <div class="link-head">
             <h2 class="link-title">Chinese Blog</h2>
-            <p class="link-desc">写作思考文集</p>
+            <span class="link-arrow" aria-hidden="true">↗</span>
           </div>
+          <p class="link-desc">写作思考文集</p>
         </a>
 
-        <a class="link-card" href="https://github.com/Anarcadia" target="_blank" rel="noopener">
-          <div class="link-top">
-            <span class="link-index">03 · WORKBENCH</span>
-            <span class="link-arrow">↗</span>
+        <a class="link-card" href="/projects/">
+          <div class="link-head">
+            <h2 class="link-title">My Project</h2>
+            <span class="link-arrow link-arrow-internal" aria-hidden="true">→</span>
           </div>
-          <div>
-            <h2 class="link-title">Workflow &amp; GitHub</h2>
-            <p class="link-desc">极简的AI辅助写作台</p>
-          </div>
+          <p class="link-desc">船板写作工具集</p>
         </a>
       </nav>
     </main>

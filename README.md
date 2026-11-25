@@ -9,3 +9,4 @@ Official bilingual landing page & digital ink garden of **Chuanban (忒修斯的
 - **GitHub Pages Mirror**: [https://anarcadia.github.io](https://anarcadia.github.io) *(Canonical pointing to `https://plankoftheseus.com/`)*
 - **Substack (Letters & Cross-Cultural Essays)**: [https://plankoftheseus.substack.com](https://plankoftheseus.substack.com)
 - **Chinese Blog Archive (写作思考文集)**: [https://chuanban.cc](https://chuanban.cc)
+- **My Project (船板写作工具集)**: [https://plankoftheseus.com/projects/](https://plankoftheseus.com/projects/)

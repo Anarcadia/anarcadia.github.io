@@ -9,5 +9,6 @@ The Plank of Theseus (`https://plankoftheseus.com`) is the bilingual literary & 
 - **Official Site (English / Bilingual)**: https://plankoftheseus.com/
 - **Substack Newsletter**: https://plankoftheseus.substack.com/
 - **Chinese Archive (华语主站 · 157+ Essays)**: https://chuanban.cc/
+- **My Project (船板写作工具集)**: https://plankoftheseus.com/projects/
 - **Open-Source Writing Exoskeletons (GitHub)**: https://github.com/Anarcadia
 - **X / Twitter**: https://x.com/Arcadia_Bao

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Project · 船板写作工具集 — The Plank of Theseus</title>
+  <meta name="description" content="船板写作工具集 — A curated collection of AI writing exoskeletons, narrative workflows, and craft tools by Chuanban (忒修斯的船板)." />
+  <link rel="canonical" href="https://plankoftheseus.com/projects/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://plankoftheseus.com/projects/" />
+  <meta property="og:title" content="My Project · 船板写作工具集 — The Plank of Theseus" />
+  <meta property="og:description" content="面向长篇创作者的 AI 写作外骨骼、叙事工作流与写作辅助工具合集。" />
+
+  <!-- Unified Serif Font Family: Cormorant Garamond + Noto Serif SC -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      /* 黑白水墨 · 素宣留白 (Black & White Ink on Raw Xuan Paper) */
+      --bg-paper: #FAFAFA;
+      --bg-wash-a: rgba(0, 0, 0, 0.018);
+      --bg-wash-b: rgba(0, 0, 0, 0.012);
+      --surface-card: rgba(255, 255, 255, 0.56);
+      --surface-card-hover: rgba(255, 255, 255, 0.92);
+      --ink-black: #0E0E0E;
+      --ink-dark: #2C2C2C;
+      --ink-mid: #5E5E5E;
+      --ink-muted: #8A8A8A;
+      --rule-strong: #1C1C1C;
+      --rule-line: #DCDCDC;
+      --rule-hover: #0E0E0E;
+      --cinnabar: #9B2C23;
+      --texture-opacity: 0.055;
+
+      /* Unified Single Serif Skeleton */
+      --font-serif: "Cormorant Garamond", "Huiwen-mincho", "Noto Serif SC", "Songti SC", "STSong", Georgia, serif;
+      --font-num: ui-monospace, "SF Mono", Menlo, monospace;
+    }
+
+    [data-theme="dark"] {
+      /* 夜砚水墨 · 浓墨素笺 (Deep Inkstone Monochrome) */
+      --bg-paper: #0E0E0E;
+      --bg-wash-a: rgba(255, 255, 255, 0.022);
+      --bg-wash-b: rgba(255, 255, 255, 0.014);
+      --surface-card: rgba(255, 255, 255, 0.02);
+      --surface-card-hover: rgba(255, 255, 255, 0.045);
+      --ink-black: #F2F2F2;
+      --ink-dark: #D0D0D0;
+      --ink-mid: #949494;
+      --ink-muted: #666666;
+      --rule-strong: #E8E8E8;
+      --rule-line: #262626;
+      --rule-hover: #F2F2F2;
+      --cinnabar: #B83A2F;
+      --texture-opacity: 0.045;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      min-height: 100%;
+      background-color: var(--bg-paper);
+      color: var(--ink-black);
+      font-family: var(--font-serif);
+      font-style: normal;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    /* Procedural Xuan Rice Paper Fiber Overlay */
+    .xuan-texture {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .xuan-texture::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 68% 48% at 14% 10%, var(--bg-wash-a) 0%, transparent 70%),
+        radial-gradient(ellipse 56% 52% at 88% 82%, var(--bg-wash-b) 0%, transparent 72%);
+    }
+
+    .xuan-texture svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: var(--texture-opacity);
+      mix-blend-mode: multiply;
+    }
+
+    [data-theme="dark"] .xuan-texture svg {
+      mix-blend-mode: screen;
+    }
+
+    .page-frame {
+      position: relative;
+      z-index: 1;
+      max-width: 1240px;
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 44px 56px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Utility Top Strip */
+    .utility-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--rule-line);
+    }
+
+    .seal-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--ink-black);
+    }
+
+    .cinnabar-seal {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border: 1px solid var(--cinnabar);
+      color: var(--cinnabar);
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1;
+      border-radius: 1.5px;
+      user-select: none;
+    }
+
+    .seal-caption {
+      font-size: 0.92rem;
+      letter-spacing: 0.14em;
+      color: var(--ink-mid);
+    }
+
+    .utility-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .back-link {
+      text-decoration: none;
+      color: var(--ink-mid);
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      transition: color 0.25s ease;
+    }
+
+    .back-link:hover {
+      color: var(--ink-black);
+    }
+
+    .theme-btn {
+      background: transparent;
+      border: 1px solid var(--rule-line);
+      color: var(--ink-mid);
+      font-family: var(--font-serif);
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      padding: 5px 14px;
+      cursor: pointer;
+      transition: border-color 0.25s ease, color 0.25s ease;
+    }
+
+    .theme-btn:hover {
+      border-color: var(--rule-hover);
+      color: var(--ink-black);
+    }
+
+    /* Page Masthead */
+    .page-masthead {
+      padding: 8vh 0 6.5vh;
+      border-bottom: 1.5px solid var(--rule-strong);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      gap: 32px;
+    }
+
+    .page-title {
+      font-size: clamp(3.2rem, 6.4vw, 5.4rem);
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: -0.024em;
+      color: var(--ink-black);
+    }
+
+    .page-side {
+      text-align: right;
+      padding-bottom: 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+    }
+
+    .page-zh {
+      font-size: clamp(1.3rem, 2vw, 1.65rem);
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      color: var(--ink-dark);
+    }
+
+    .page-meta {
+      font-family: var(--font-num);
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+    }
+
+    /* Intro Band */
+    .intro-band {
+      padding: 5vh 0;
+      border-bottom: 1px solid var(--rule-line);
+    }
+
+    .intro-inner {
+      max-width: 840px;
+    }
+
+    .intro-en {
+      font-size: clamp(1.32rem, 2vw, 1.68rem);
+      font-weight: 400;
+      line-height: 1.48;
+      color: var(--ink-black);
+      margin-bottom: 12px;
+    }
+
+    .intro-zh {
+      font-size: 1.02rem;
+      line-height: 1.75;
+      letter-spacing: 0.06em;
+      color: var(--ink-mid);
+    }
+
+    /* Project Showcase Grid */
+    .projects-section {
+      padding: 6vh 0 5.5vh;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .project-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 28px;
+      padding: 32px 32px 28px;
+      border: 1px solid var(--rule-line);
+      background-color: var(--surface-card);
+      text-decoration: none;
+      color: inherit;
+      min-height: 236px;
+      transition: border-color 0.28s ease, background-color 0.28s ease, transform 0.28s ease;
+    }
+
+    a.project-card:hover {
+      border-color: var(--rule-hover);
+      background-color: var(--surface-card-hover);
+      transform: translateY(-2px);
+    }
+
+    .project-card--pending {
+      border-style: dashed;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .project-status {
+      font-family: var(--font-num);
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      padding: 3px 9px;
+      border: 1px solid var(--rule-line);
+      white-space: nowrap;
+    }
+
+    .project-status--active {
+      color: var(--cinnabar);
+      border-color: var(--cinnabar);
+    }
+
+    .project-name {
+      font-size: 1.68rem;
+      font-weight: 500;
+      line-height: 1.24;
+      color: var(--ink-black);
+      margin-bottom: 6px;
+    }
+
+    .project-zh {
+      font-size: 1.02rem;
+      letter-spacing: 0.1em;
+      color: var(--ink-dark);
+      margin-bottom: 14px;
+    }
+
+    .project-desc {
+      font-size: 0.96rem;
+      line-height: 1.72;
+      color: var(--ink-mid);
+    }
+
+    .project-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 18px;
+      border-top: 1px solid var(--rule-line);
+      font-size: 0.88rem;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+    }
+
+    .arrow-glyph {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      display: inline-block;
+    }
+
+    .project-cta {
+      color: var(--ink-dark);
+      transition: color 0.25s ease, transform 0.25s ease;
+    }
+
+    a.project-card:hover .project-cta {
+      color: var(--cinnabar);
+      transform: translateX(3px);
+    }
+
+    /* Secondary Reference Strip */
+    .ref-strip {
+      padding: 26px 0 36px;
+      border-top: 1px solid var(--rule-line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .ref-link {
+      text-decoration: none;
+      color: var(--ink-mid);
+      font-size: 0.96rem;
+      letter-spacing: 0.06em;
+      transition: color 0.25s ease;
+    }
+
+    .ref-link:hover {
+      color: var(--ink-black);
+      text-decoration: underline;
+      text-underline-offset: 6px;
+      text-decoration-thickness: 1px;
+    }
+
+    /* Footer */
+    .foot {
+      padding-top: 22px;
+      border-top: 1px solid var(--rule-line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.84rem;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+    }
+
+    @media (max-width: 899px) {
+      .page-frame {
+        max-width: 600px;
+        padding: 26px 24px 32px;
+      }
+
+      .utility-bar {
+        padding-bottom: 16px;
+      }
+
+      .utility-actions {
+        gap: 12px;
+      }
+
+      .page-masthead {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 40px 0 32px;
+      }
+
+      .page-title {
+        font-size: clamp(2.35rem, 10vw, 3.2rem);
+      }
+
+      .page-side {
+        text-align: left;
+        align-items: flex-start;
+        padding-bottom: 0;
+        gap: 6px;
+      }
+
+      .page-zh {
+        font-size: 1.12rem;
+        letter-spacing: 0.18em;
+      }
+
+      .intro-band {
+        padding: 32px 0;
+      }
+
+      .intro-en {
+        font-size: 1.24rem;
+      }
+
+      .projects-section {
+        padding: 32px 0;
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .project-card {
+        padding: 24px 22px 22px;
+        min-height: auto;
+      }
+
+      .project-name {
+        font-size: 1.44rem;
+      }
+
+      .foot {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        padding-top: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="xuan-texture" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+      <filter id="xuan-fiber" x="0%" y="0%" width="100%" height="100%">
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.68 0.14"
+          numOctaves="4"
+          seed="17"
+          result="rawNoise" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0.08
+                  0 0 0 0 0.08
+                  0 0 0 0 0.08
+                  0 0 0 0.42 0"
+          in="rawNoise"
+          result="finePaper" />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#xuan-fiber)" />
+    </svg>
+  </div>
+
+  <div class="page-frame">
+    <header class="utility-bar">
+      <a href="/" class="seal-mark" aria-label="The Plank of Theseus">
+        <span class="cinnabar-seal" title="船板">船</span>
+        <span class="seal-caption">THE PLANK OF THESEUS</span>
+      </a>
+      <div class="utility-actions">
+        <a href="/" class="back-link"><span class="arrow-glyph">←</span> 返回主页</a>
+        <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle Ink Mode">夜砚 · Ink</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-masthead" aria-label="Projects Title Banner">
+        <h1 class="page-title">My Project</h1>
+        <div class="page-side">
+          <p class="page-zh">船板写作工具集</p>
+          <p class="page-meta">PLANKOFTHESEUS.COM / PROJECTS</p>
+        </div>
+      </section>
+
+      <section class="intro-band" aria-label="Collection Overview">
+        <div class="intro-inner">
+          <p class="intro-en">
+            AI writing exoskeletons, long-form craft workbenches, and quiet tools built to keep the human hand on the helm.
+          </p>
+          <p class="intro-zh">
+            面向长篇小说与深度写作的 AI 外骨骼、工作流与独立工具合集——让工具退居幕后，让作者握紧舵盘。
+          </p>
+        </div>
+      </section>
+
+      <section class="projects-section" aria-label="Writing Tools Directory">
+        <div class="project-grid" id="project-grid">
+          <!--
+            ============================================================
+            PROJECT SLOT 1 · 首个独立工具落地页对接位
+            在另一个会话完成工具落地页后，将此 <article> 改为：
+            <a class="project-card" href="/projects/<tool-slug>/" ...>
+            或指向外部独立工具落地页域名，并将 status 替换为 project-status--active。
+            ============================================================
+          -->
+          <article class="project-card project-card--pending" data-slot="primary-writing-tool">
+            <div>
+              <div class="project-header">
+                <h2 class="project-name">Writing Tool Landing</h2>
+                <span class="project-status">IN PROGRESS</span>
+              </div>
+              <p class="project-zh">首款写作工具 · 独立落地页对接中</p>
+              <p class="project-desc">
+                即将接入独立开发的船板写作工具落地页。本卡片已预留标准展示位与跳转入口，上线后可直接点击进入工具主页。
+              </p>
+            </div>
+            <div class="project-footer">
+              <span>即将上线 · Coming Soon</span>
+              <span class="project-cta">待接入 <span class="arrow-glyph">→</span></span>
+            </div>
+          </article>
+
+          <!--
+            ============================================================
+            PROJECT SLOT 2 · 后续工具扩展位 / 开源代码库
+            可继续追加更多写作工具卡片，当前先保留开源仓库作为工具集参考入口。
+            ============================================================
+          -->
+          <a class="project-card" href="https://github.com/Anarcadia" target="_blank" rel="noopener">
+            <div>
+              <div class="project-header">
+                <h2 class="project-name">Open-Source Workbench</h2>
+                <span class="project-status project-status--active">GITHUB</span>
+              </div>
+              <p class="project-zh">开源写作脚本与工作流实验库</p>
+              <p class="project-desc">
+                公开维护的写作辅助脚本、配置模板与 AI 写作工作流原型代码仓库。
+              </p>
+            </div>
+            <div class="project-footer">
+              <span>github.com/Anarcadia</span>
+              <span class="project-cta">访问仓库 <span class="arrow-glyph">↗</span></span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <div class="ref-strip">
+        <a href="/" class="ref-link"><span class="arrow-glyph">←</span> Back to The Plank of Theseus · 返回船板主页</a>
+        <a href="https://chuanban.cc" target="_blank" rel="noopener" class="ref-link">写作思考文集 (chuanban.cc) <span class="arrow-glyph">↗</span></a>
+      </div>
+    </main>
+
+    <footer class="foot">
+      <span>© Chuanban · 忒修斯的船板</span>
+      <span>Monochrome Ink &amp; Raw Xuan</span>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var btn = document.getElementById("themeBtn");
+      var saved = localStorage.getItem("plank_theme");
+      if (saved === "dark") {
+        root.setAttribute("data-theme", "dark");
+        btn.textContent = "素宣 · Paper";
+      }
+      btn.addEventListener("click", function () {
+        var isDark = root.getAttribute("data-theme") === "dark";
+        if (isDark) {
+          root.removeAttribute("data-theme");
+          localStorage.setItem("plank_theme", "light");
+          btn.textContent = "夜砚 · Ink";
+        } else {
+          root.setAttribute("data-theme", "dark");
+          localStorage.setItem("plank_theme", "dark");
+          btn.textContent = "素宣 · Paper";
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
