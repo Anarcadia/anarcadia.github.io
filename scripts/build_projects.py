@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path("/Users/yunhanbao/Documents/Root/Factory/projects/plankoftheseus-site")
 DIST = ROOT / "dist"
-TODAY = "2026-11-26"
+TODAY = "2026-11-28"
 FEISHU_HUB_URL = "https://www.feishu.cn/wiki/Jz5PwKG2VilS2WkMJCQcg8CLnp7"
 
 XUAN_SVG = """  <div class="xuan-texture" aria-hidden="true">
@@ -40,80 +40,83 @@ TOOLS = [
     {
         "slug": "antigravity-theme",
         "title": "船板 Antigravity 美化+汉化补丁",
-        "en_subtitle": "Minimalist theme & optional ZH/JA localization patch for Antigravity — featuring Morandi and Claude day/night palettes with a handy status pill.",
-        "version": "v6.0.3",
+        "en_subtitle": "Minimalist theme & optional ZH/JA localization patch for Antigravity — featuring Meadow Inkstone, Morandi, and Claude day/night palettes with a live status pill.",
+        "version": "v6.1.0",
         "tags": {
             "distribution": ["GitHub MIT", "全功能私人安装包"],
             "platform": "Antigravity",
             "kind": "一体化环境包",
         },
-        "summary": "Antigravity 极简外观美化和汉化、日文化补丁包，可自选语言或不安装语言包独享皮肤美化。包含莫兰迪配色、Claude 风昼夜配色三种主要模式和便利性显示胶囊。",
-        "lead": "Antigravity 极简外观美化和汉化、日文化补丁包，可自选语言或不安装语言包独享皮肤美化。包含莫兰迪配色、Claude 风昼夜配色三种主要模式和便利性显示胶囊。",
+        "summary": "Antigravity 极简外观美化和汉化补丁包（另备纯英文轻仓），内置「草墨石砚」清爽草木风、「莫兰迪」古典矿物风、Claude 风昼夜配色等七段式切换，支持跟随系统、一键热升级与上下文状态胶囊。",
+        "lead": "Antigravity 极简外观美化和汉化补丁包（另备纯英文轻仓），内置「草墨石砚」清爽草木风、「莫兰迪」古典矿物风、Claude 风昼夜配色等七段式切换，支持跟随系统、一键热升级与上下文状态胶囊。",
         "thumb": "/assets/projects/antigravity/preview-morandi-workbench.webp",
         "github_url": "https://github.com/Anarcadia/chuanban-antigravity-theme-patch",
         "github_label": "Anarcadia/chuanban-antigravity-theme-patch",
         "extra_links": [
             ("SKILL.md（Agent 部署契约）", "https://github.com/Anarcadia/chuanban-antigravity-theme-patch/blob/main/SKILL.md"),
             ("CHANGELOG.md（更新日志）", "https://github.com/Anarcadia/chuanban-antigravity-theme-patch/blob/main/CHANGELOG.md"),
+            ("Global 英文平行轻仓", "https://github.com/Anarcadia/chuanban-antigravity-theme"),
         ],
         "feishu_doc_url": "https://www.feishu.cn/wiki/EQyqwJEqmi1LH3k11tzcmkMHnYd",
         "feishu_dl_url": "https://www.feishu.cn/wiki/V2lbwB8ykiLLXrkzY41cXjQ1nXc",
         "gallery": [
             ("/assets/projects/antigravity/preview-morandi-workbench.webp", "1. 默认标准主界面：莫兰迪风格（MO）与上下文信息胶囊详情卡"),
-            ("/assets/projects/antigravity/preview-theme-lang-switcher.webp", "2. 外观与语言切换面板：五段式皮肤选择 + [ EN | 中文 ] 一键双切"),
+            ("/assets/projects/antigravity/preview-theme-lang-switcher.webp", "2. 外观与语言切换面板：七段式皮肤选择 + [ EN | 中文 ] 一键双切"),
             ("/assets/projects/antigravity/preview-absolutely-workbench.webp", "3. Absolutely! 主题演示：仿 Claude 书卷暖白工作台与子 Agent 汉化副栏"),
-            ("/assets/projects/antigravity/preview-dark-workbench.webp", "4. 夜间界面与代码审阅视图（支持 暖纸深色 / 深海冷碳 切换）"),
+            ("/assets/projects/antigravity/preview-dark-workbench.webp", "4. 夜间界面与代码审阅视图（支持 幽林深色 / 暖纸深色 / 深海冷碳 切换）"),
         ],
         "features": [
-            ("多套打磨风格与系统日夜自动跟随", "内置莫兰迪古典矿物风格（默认）、仿 Claude 书卷暖白（Absolutely!）、温润书卷夜间与深海冷碳深色模式，支持独立「跟随系统」自动日夜配对，并可一键退回官方原版风格。"),
-            ("2,210 条母语级汉化与中英双切", "覆盖主界面、设置项、编排器、Swarm 蜂群工作台与子 Agent 面板的自然中文汉化，严格隔离代码块、终端与文件名避免误翻；外观面板支持 [ EN | 中文 ] 一键切换。"),
-            ("字体美化与活字微润墨特效", "精选书卷衬线长文、现代无衬线界面与人文等宽代码字体组合，在浅色纸面融入细腻微润墨柔化，消除中英文混排发虚与字重断层。"),
-            ("极简上下文信息胶囊与 Token 统计", "输入框底栏内嵌低干扰状态胶囊，支持主窗口、分屏、支线与子 Agent 独立显示速率、首字延迟与上下文圆环；设置面板集成多维本地只读 Token 统计。"),
+            ("多套深度调教皮肤，绝非简单换色", "「草墨石砚」负责清新愉快，「莫兰迪古典矿物风格」负责典雅、书卷暖白风格「Absolutely！」负责 Claude 味儿、「温润书卷夜间风格」与「幽林深色」负责夜晚护眼；提供独立的「跟随系统」自动日夜配对开关，支持一键切回官方原版冰蓝色皮肤。"),
+            ("2,371 条母语级汉化与中英一键双切", "内置 2,371 条自然中文汉化（覆盖主界面、斜杠命令、设置项、编排器与 Swarm 子 Agent 面板），严格隔离代码块与凭据避免误翻；提供 [ EN | 中文 ] 独立按钮，随时一键退回英文。"),
+            ("字体美化、中西文混排调校与微润墨特效", "精选书卷衬线长文、现代无衬线界面与人文等宽代码字体组合，分层桥接中西文字重比例并在浅色纸面融入细腻活字微润墨效果（草墨石砚在 macOS 开启润墨，Windows 严格零晕墨保持清脆）。"),
+            ("上下文迷你信息胶囊、Token 统计与一键热升级", "输入框底栏内嵌迷你信息胶囊（显示速率、首字延迟与上下文圆环，悬停可见详情），系统设置集成「Token 统计」面板；内核 core/ 与用户配置 user/ 分离，支持双镜像一键原地热升级（upgrade）且不覆盖个人设置。"),
             ("纯粹克制与非侵入式低风险设计", "仅通过本机回环（127.0.0.1）CDP 通道向前端渲染层注入 CSS 样式与静态汉化词条，不解包、不修改 app.asar 安装包，完整保留客户端官方数字签名与系统公证；内置的 Token 统计与指标胶囊仅离线只读解析本机已落盘的 SQLite 会话库，不读取系统钥匙串与 OAuth 凭据、不调用 Google 内部私有配额接口（如 retrieveUserQuotaSummary）、不伪造客户端身份标识（User-Agent / clientInfo），亦不涉及任何 CDP 对话流自动化操控、网络代理拦截、多账号切换或跨工具目录扫描等其他技术手段（注：纯前端运行时渲染层注入虽不涉及网络请求与鉴权凭据交互，但在客户端服务条款字面上仍属未显式授权的本地修改灰区，并非绝对零风险，支持随时一键彻底卸载并无损还原）。"),
         ],
         "table": {
-            "heading": "五段式内置皮肤预设",
+            "heading": "七段式内置皮肤预设",
             "headers": ["按钮", "预设名称", "定位与氛围说明"],
             "rows": [
-                ["MO", "莫兰迪 (morandi)", "默认浅色：温润耐看的古典矿物灰暖纸基调，长时间读写零疲劳。"],
-                ["AB", "Absolutely! (claude)", "仿 Claude 书卷暖白：经典温暖纸面搭配陶土强调色，极简学术与长文气质。"],
-                ["暖夜", "暖纸深色 (warm-dark)", "温润书卷夜间：柔和暗纸底色配暖调字色与陶土点缀，适合夜间沉浸写作。"],
-                ["深色", "深海冷碳 (onyx)", "深海青黛暗底配石青点缀，冷静克制，适合代码审阅与暗光环境。"],
+                ["MO", "莫兰迪 (morandi)", "默认浅色：暖宣纸浅灰画布搭配亚麻侧栏与烟岚石青单线输入框，温润耐看零疲劳。"],
+                ["🌱", "草墨石砚 (meadow)", "清新草木现代风：极微细磨灰石画布配石砚青灰外框、森草绿 1px 扁平框与现代无衬线正文（Windows 零晕墨清脆渲染）。"],
+                ["✳️", "Absolutely! (absolutely)", "仿 Claude 书卷暖白：经典温暖纸面搭配陶土强调色，极简学术与长文气质。"],
+                ["🌲", "幽林深色 (forest-night)", "暖松炭黑草木夜间：深林松针炭底配苔藓实色浮层、翠草绿点缀与无衬线正文，彻底去除毛玻璃。"],
+                ["📖", "暖纸深色 (claude-warm)", "温润书卷夜间：柔和暗纸底色配暖调字色与陶土点缀，适合夜间沉浸写作。"],
+                ["🌙", "深海冷碳 (onyx)", "深海青黛暗底配石青点缀，冷静克制，适合代码审阅与暗光环境。"],
                 ["A", "原版配色 (native)", "一键旁路补丁配色与自定义字体，回归官方原貌同时保留汉化与统计可用。"],
             ],
         },
         "install_blocks": [
             {
                 "title": "新用户首次安装：复制引导词发给你的 AI Agent（推荐）",
-                "desc": "环境要求 Node.js >= 22.0.0（推荐 >= 22.13.0）。必备字体支持脚本自动下载并注册；如终端网络受限，可先在「资源下载页」通过浏览器下载字体包后交给脚本安装。",
-                "code_label": "AGENT PROMPT · 首次部署 v6.0.3",
+                "desc": "支持 Antigravity 2.36.0+ / 2.35.x / 2.34.0+，环境要求 Node.js >= 22.0.0（推荐 >= 22.13.0）。必备字体支持脚本从 Cloudflare R2 / GitHub 多源自动下载注册；国内网络如较慢，可直接在「资源下载页」打开飞书免代理分流页下载后交给脚本安装。",
+                "code_label": "AGENT PROMPT · 首次部署 v6.1.0",
                 "code": """请帮我克隆 https://github.com/Anarcadia/chuanban-antigravity-theme-patch.git（或读取我已下载解压的补丁目录），先完整阅读仓库内的 SKILL.md，再按以下顺序部署并处理边缘情况：
 1. 若本机有 nvm / fnm / volta，优先切换至 Node >= 22.13.0 执行命令；运行 node install.mjs doctor 检查 fonts.allRequiredInstalled 与 fonts.unregisteredWarning。
 2. 若缺少字体（或 Windows 提示有未写注册表的用户字体）：
    - 若我本地已下载好字体目录或 .zip，直接执行 node install.mjs install-fonts --from "<字体目录或.zip路径>"；
    - 若本地尚未下载，直接执行 node install.mjs install-fonts --auto-download（Windows 检出旧版 SuperTTC 请追加 --retire-super-ttc）；
-   - 若终端网络/代理受限，提示我通过资源下载页下载全部字体到同一目录后再运行 install-fonts --from（macOS 缺少更纱也可用 brew install --cask font-sarasa-gothic）。
+   - 若中国大陆终端下载遇阻或较慢，提示我打开飞书国内免代理字体页（https://www.feishu.cn/wiki/V2lbwB8ykiLLXrkzY41cXjQ1nXc）下载全部字体到同一目录后再运行 install-fonts --from（macOS 缺少更纱也可用 brew install --cask font-sarasa-gothic）。
 3. 运行 node install.mjs install 完成安装（默认启用 "morandi" 莫兰迪风格）。
 4. 若输出 cdpStatus 为 "missing_opt_in_flag" 且你当前正在 Antigravity 内部会话中，请勿强行重启自断会话，提示我空闲时运行 node ~/.gemini/antigravity/theme-patch/install.mjs relaunch（或手动重开客户端）。
 5. 端口就绪后运行 node install.mjs verify，确认 "ok": true、"hasStyle": true 且 fonts.allRequiredInstalled: true 即完成验收。""",
             },
             {
-                "title": "老用户无损升级至 v6.0.3",
-                "desc": "升级自动备份旧版 core/ 内核并完整保留 ~/.gemini/antigravity/theme-patch/user/ 下的个人自定义字号、配色与词条覆盖。",
-                "code_label": "AGENT PROMPT · 升级至 v6.0.3",
-                "code": """请帮我拉取最新的 https://github.com/Anarcadia/chuanban-antigravity-theme-patch.git（或读取最新解压目录），阅读 SKILL.md 后直接运行 node install.mjs install 升级至 v6.0.3。若端口未开启且你正在 Antigravity 内部会话中，请提示我空闲时执行 relaunch，就绪后运行 node install.mjs verify 验收。""",
+                "title": "老用户无损升级至 v6.1.0（支持 upgrade 一键增量热升级）",
+                "desc": "已安装 >= v6.0.7 的用户可直接在「系统设置 → 外观界面」底部点击「立即热升级」（或运行 node install.mjs upgrade）原地秒升；更早版本复制下方指令升级一次即可保留 user/ 自定义配置并接入热升级。",
+                "code_label": "AGENT PROMPT · 升级至 v6.1.0",
+                "code": """请帮我拉取最新的 https://github.com/Anarcadia/chuanban-antigravity-theme-patch.git（或读取最新解压目录），阅读 SKILL.md 后直接运行 node install.mjs install 升级至 v6.1.0。若端口未开启且你正在 Antigravity 内部会话中，请提示我空闲时执行 relaunch，就绪后运行 node install.mjs verify 验收。""",
             },
         ],
         "callout": "<strong>开发红线与合规边界：</strong>本仓库 main 分支坚决不加入自动操控对话流、绕过配额、拦截网络请求、读取 OAuth 凭据或修改客户端二进制签名的功能。本项目为独立非官方社区视觉增强补丁，与 Google 无关，随时可运行 <code>node install.mjs uninstall</code> 彻底还原。",
         "download_intro": "集中提供 GitHub Releases 官方包、Google Drive 海外公开分流与飞书国内免代理分流页。如终端网络畅通，脚本亦支持 <code>node install.mjs install-fonts --auto-download</code> 自动拉取字体。",
         "downloads": [
             {
-                "name": "主程序补丁包 · chuanban-antigravity-theme-patch-v6.0.3.zip",
-                "meta": "v6.0.3 · 9.6 MB · 含 core/ 内核、install.mjs 与 SKILL.md",
-                "desc": "完整预封装内核、个人改装层模板、2,210 条汉化词库与生命周期 CLI，支持 macOS / Windows / Linux。",
+                "name": "主程序补丁包 · chuanban-antigravity-theme-patch-v6.1.0.zip",
+                "meta": "v6.1.0 · 9.7 MB · 含 core/ 内核、七段式皮肤（含草墨石砚）、install.mjs 与 SKILL.md",
+                "desc": "完整预封装内核、个人改装层模板、2,371 条汉化词库与双镜像一键热升级 CLI，支持 Antigravity 2.36.0+（macOS / Windows / Linux）。",
                 "mirrors": [
-                    ("GitHub Release 直下", "GITHUB", "https://github.com/Anarcadia/chuanban-antigravity-theme-patch/releases/download/v6.0.3/chuanban-antigravity-theme-patch-v6.0.3.zip", True),
-                    ("Google Drive 公开分流", "DRIVE", "https://drive.google.com/file/d/1P90Y6j_2H59cGAKbjvu8B2BjofCJo6GP/view?usp=sharing", False),
+                    ("GitHub Release 直下", "GITHUB", "https://github.com/Anarcadia/chuanban-antigravity-theme-patch/releases/download/v6.1.0/chuanban-antigravity-theme-patch-v6.1.0.zip", True),
+                    ("Google Drive 公开分流", "DRIVE", "https://drive.google.com/file/d/1_NJ5NahAG7qA4atZzkqrLok_ZIXa9ywC/view?usp=sharing", False),
                     ("GitHub 仓库源码", "REPO", "https://github.com/Anarcadia/chuanban-antigravity-theme-patch", False),
                 ],
             },
