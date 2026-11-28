@@ -60,10 +60,12 @@ TOOLS = [
         "feishu_doc_url": "https://www.feishu.cn/wiki/EQyqwJEqmi1LH3k11tzcmkMHnYd",
         "feishu_dl_url": "https://www.feishu.cn/wiki/V2lbwB8ykiLLXrkzY41cXjQ1nXc",
         "gallery": [
-            ("/assets/projects/antigravity/preview-morandi-workbench.webp", "1. 默认标准主界面：莫兰迪风格（MO）与上下文信息胶囊详情卡"),
-            ("/assets/projects/antigravity/preview-theme-lang-switcher.webp", "2. 外观与语言切换面板：七段式皮肤选择 + [ EN | 中文 ] 一键双切"),
-            ("/assets/projects/antigravity/preview-absolutely-workbench.webp", "3. Absolutely! 主题演示：仿 Claude 书卷暖白工作台与子 Agent 汉化副栏"),
-            ("/assets/projects/antigravity/preview-dark-workbench.webp", "4. 夜间界面与代码审阅视图（支持 幽林深色 / 暖纸深色 / 深海冷碳 切换）"),
+            ("/assets/projects/antigravity/preview-meadow-workbench.webp", "1. 草墨石砚（🌱 meadow）：细磨灰石画布 × 森草绿 1px 扁平框 × 无衬线正文与绿色指标卡"),
+            ("/assets/projects/antigravity/preview-forest-night-workbench.webp", "2. 幽林深色（🌲 forest-night）：暖松炭黑底 × 苔藓实色浮层 × 翠草绿点缀"),
+            ("/assets/projects/antigravity/preview-morandi-workbench.webp", "3. 莫兰迪色（MO 默认）：暖宣纸画布 × 烟岚石青单线收口与书卷衬线正文"),
+            ("/assets/projects/antigravity/preview-absolutely-workbench.webp", "4. Absolutely!（✳️）：仿 Claude 书卷暖白工作台与子 Agent 汉化副栏"),
+            ("/assets/projects/antigravity/preview-dark-workbench.webp", "5. 经典双夜间模式（📖 暖纸深色 / 🌙 深海冷碳）与代码 Diff 审阅"),
+            ("/assets/projects/antigravity/preview-theme-lang-switcher.webp", "6. 原版直通（A）与外观面板：七段式预设 + 跟随系统 + [ EN | 中文 ] 双切"),
         ],
         "features": [
             ("多套深度调教皮肤，绝非简单换色", "「草墨石砚」负责清新愉快，「莫兰迪古典矿物风格」负责典雅、书卷暖白风格「Absolutely！」负责 Claude 味儿、「温润书卷夜间风格」与「幽林深色」负责夜晚护眼；提供独立的「跟随系统」自动日夜配对开关，支持一键切回官方原版冰蓝色皮肤。"),
