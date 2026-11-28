@@ -1,7 +1,10 @@
 # The Plank of Theseus · 忒修斯的船板
 
-> *"When AI replaces every part of the ship, what is the unreplaceable plank of a story?"*
-> 「当 AI 替换掉所有零件，什么才是故事换不掉的那块船板？」
+> *"As AI rebuilds you plank by plank, what story still sails under your own name?"*
+> 「当 AI 逐渐替代了你的每一块骨架，依然属于你自己的故事是什么？」
+>
+> **How to become a one-person storytelling powerhouse in the age of AI, and sell your stories to readers worldwide.**
+> 如何在 AI 时代成为故事创作的超级个体，把自己的故事卖给全世界的读者。
 
 Official bilingual landing page & digital ink garden of **Chuanban (忒修斯的船板 / @Anarcadia)**.
 

@@ -1,14 +1,14 @@
 # The Plank of Theseus (忒修斯的船板)
 
-> "When AI replaces every part of the ship, what is the unreplaceable plank of a story?"
-> 「当 AI 替换掉所有零件，什么才是故事换不掉的那块船板？」
+> "As AI rebuilds you plank by plank, what story still sails under your own name?"
+> 「当 AI 逐渐替代了你的每一块骨架，依然属于你自己的故事是什么？」
 
-The Plank of Theseus (`https://plankoftheseus.com`) is the bilingual literary & craft home of **Chuanban (忒修斯的船板 / Arcadia)** — fiction writer, AI-workflow explorer, and essayist on the Eastern Wuxia, Xianxia, and Webnovel narrative canon.
+The Plank of Theseus (`https://plankoftheseus.com`) is the bilingual literary & craft home of **Chuanban (忒修斯的船板 / Arcadia)** — exploring how to become a one-person storytelling powerhouse in the age of AI, and sell your stories to readers worldwide (如何在 AI 时代成为故事创作的超级个体，把自己的故事卖给全世界的读者).
 
 ## Primary Channels
 - **Official Site (English / Bilingual)**: https://plankoftheseus.com/
 - **Substack Newsletter**: https://plankoftheseus.substack.com/
-- **Chinese Archive (华语主站 · 157+ Essays)**: https://chuanban.cc/
+- **Chinese Archive (华语主站 · 160+ Essays)**: https://chuanban.cc/
 - **My Project (船板写作工具集)**: https://plankoftheseus.com/projects/
 - **Open-Source Writing Exoskeletons (GitHub)**: https://github.com/Anarcadia
 - **X / Twitter**: https://x.com/Arcadia_Bao

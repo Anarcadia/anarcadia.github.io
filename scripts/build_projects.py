@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path("/Users/yunhanbao/Documents/Root/Factory/projects/plankoftheseus-site")
 DIST = ROOT / "dist"
-TODAY = "2026-11-25"
+TODAY = "2026-11-26"
 FEISHU_HUB_URL = "https://www.feishu.cn/wiki/Jz5PwKG2VilS2WkMJCQcg8CLnp7"
 
 XUAN_SVG = """  <div class="xuan-texture" aria-hidden="true">
@@ -40,11 +40,15 @@ TOOLS = [
     {
         "slug": "antigravity-theme",
         "title": "船板 Antigravity 美化+汉化补丁",
-        "en_subtitle": "Antigravity Editorial Theme, CJK i18n & Local Token Telemetry Patch",
+        "en_subtitle": "Minimalist theme & optional ZH/JA localization patch for Antigravity — featuring Morandi and Claude day/night palettes with a handy status pill.",
         "version": "v6.0.3",
-        "badges": ["v6.0.3", "Antigravity 2.35.1+", "macOS / Windows / Linux", "MIT"],
-        "summary": "Google Antigravity 轻量级外观美化、2,210 条母语级汉化（中英一键双切）与本地只读 Token 统计补丁，内置莫兰迪 / 仿 Claude 暖白 / 双深色五段式预设，由 AI Agent 一键无损部署。",
-        "lead": "面向 Google Antigravity 的轻量级外观、排版、汉化与本地只读统计增强补丁。专注于纯粹的界面审美与信息可读性优化，由 AI Agent 一键部署，支持热重载个性化定制与随时无损还原。",
+        "tags": {
+            "distribution": ["GitHub MIT", "全功能私人安装包"],
+            "platform": "Antigravity",
+            "kind": "一体化环境包",
+        },
+        "summary": "Antigravity 极简外观美化和汉化、日文化补丁包，可自选语言或不安装语言包独享皮肤美化。包含莫兰迪配色、Claude 风昼夜配色三种主要模式和便利性显示胶囊。",
+        "lead": "Antigravity 极简外观美化和汉化、日文化补丁包，可自选语言或不安装语言包独享皮肤美化。包含莫兰迪配色、Claude 风昼夜配色三种主要模式和便利性显示胶囊。",
         "thumb": "/assets/projects/antigravity/preview-morandi-workbench.webp",
         "github_url": "https://github.com/Anarcadia/chuanban-antigravity-theme-patch",
         "github_label": "Anarcadia/chuanban-antigravity-theme-patch",
@@ -65,7 +69,7 @@ TOOLS = [
             ("2,210 条母语级汉化与中英双切", "覆盖主界面、设置项、编排器、Swarm 蜂群工作台与子 Agent 面板的自然中文汉化，严格隔离代码块、终端与文件名避免误翻；外观面板支持 [ EN | 中文 ] 一键切换。"),
             ("字体美化与活字微润墨特效", "精选书卷衬线长文、现代无衬线界面与人文等宽代码字体组合，在浅色纸面融入细腻微润墨柔化，消除中英文混排发虚与字重断层。"),
             ("极简上下文信息胶囊与 Token 统计", "输入框底栏内嵌低干扰状态胶囊，支持主窗口、分屏、支线与子 Agent 独立显示速率、首字延迟与上下文圆环；设置面板集成多维本地只读 Token 统计。"),
-            ("纯粹克制与非侵入式低风险设计", "严格限定于纯前端视觉呈现与本地数据只读展示，不掺杂对话自动化、网络拦截或凭据读取，不修改客户端安装包与二进制签名，随时可无损卸载还原。"),
+            ("纯粹克制与非侵入式低风险设计", "仅通过本机回环（127.0.0.1）CDP 通道向前端渲染层注入 CSS 样式与静态汉化词条，不解包、不修改 app.asar 安装包，完整保留客户端官方数字签名与系统公证；内置的 Token 统计与指标胶囊仅离线只读解析本机已落盘的 SQLite 会话库，不读取系统钥匙串与 OAuth 凭据、不调用 Google 内部私有配额接口（如 retrieveUserQuotaSummary）、不伪造客户端身份标识（User-Agent / clientInfo），亦不涉及任何 CDP 对话流自动化操控、网络代理拦截、多账号切换或跨工具目录扫描等其他技术手段（注：纯前端运行时渲染层注入虽不涉及网络请求与鉴权凭据交互，但在客户端服务条款字面上仍属未显式授权的本地修改灰区，并非绝对零风险，支持随时一键彻底卸载并无损还原）。"),
         ],
         "table": {
             "heading": "五段式内置皮肤预设",
@@ -139,13 +143,94 @@ TOOLS = [
         ],
     },
     {
+        "slug": "obsidian-chuanban-green",
+        "title": "松绿记事本 · Obsidian 主题",
+        "seo_description": "仿佛绿草藤蔓记事本一样美丽的护眼 Obsidian 皮肤，推荐作为个人记事本或者小说创作默认主题使用。",
+        "en_subtitle": "An eye-friendly Obsidian theme that feels like holding a vine-bound botanical notebook in your hands — my top recommendation as a default theme for personal journaling or fiction writing. Search \"chuanban-green\" in the Obsidian Community Themes store for the Lite edition; the download page provides the full theme, complete font pack, and plugin bundle.",
+        "version": "v1.0.5 / 全装字体包",
+        "tags": {
+            "distribution": ["GitHub MIT", "全功能私人安装包"],
+            "platform": "Obsidian",
+            "kind": "皮肤",
+        },
+        "summary": "手捧绿草藤蔓记事本一般的护眼 Obsidian 皮肤，我极其推荐作为个人记事本或者小说创作默认主题使用。简装版可在 Obsidian 主题商店搜 chuanban-green 安装；下载页提供完整主题、完整字体、插件包。",
+        "lead": "手捧绿草藤蔓记事本一般的护眼 Obsidian 皮肤，我极其推荐作为个人记事本或者小说创作默认主题使用。简装版可在 Obsidian 主题商店搜 chuanban-green 安装；下载页提供完整主题、完整字体、插件包。（采用植物编辑风 × 新粗野主义设计：全域 0px 直角、1px 炭黑外露网格、三阶暖色印刷纸底、松绿硬边偏移阴影与阅读/编辑双模式字体分离。）",
+        "thumb": "/assets/projects/chuanban-green/screenshot.webp",
+        "github_url": "https://github.com/Anarcadia/chuanban-highcontrast-green",
+        "github_label": "Anarcadia/chuanban-highcontrast-green",
+        "extra_links": [],
+        "feishu_doc_url": "https://www.feishu.cn/wiki/OftdwaNjBidHBgk9siQcDmNlnBg",
+        "feishu_dl_url": "https://www.feishu.cn/wiki/ASmww8RaaifwkjkysO6c7t9xnYc",
+        "gallery": [
+            ("/assets/projects/chuanban-green/screenshot.webp", "1. 主界面实机展示（满血 vivo Sans 印刷黑体 + Sarasa Mono Slab SC 等距打字机效果）"),
+            ("/assets/projects/chuanban-green/screenshot-overview.webp", "2. 界面视觉与瑞士网格设计细节图解"),
+        ],
+        "features": [
+            ("全域 0px 纯直角与 1px 炭黑外露网格", "彻底移除圆角与弧脚，所有 Tab、按钮、输入框与弹窗均为干脆利落的直角矩形；1px solid #181B18 实线贯穿切分左右侧栏、Tab、大纲与表格，重现瑞士网格秩序感。"),
+            ("三阶暖色印刷纸底拉开空间景深", "中央道林浅灰纸 (#ECEAE2) → 侧栏旧报刊中暖灰 (#E2DFD5) → 右上大纲亚麻深暖灰 (#D6D2C6)，无需阴影模糊即可自然区分工作区层级。"),
+            ("松绿强调色 + 3px 纯色硬边阴影", "竹青浓绿 (#78AB88) / 深松墨绿 (#26593F) 搭配零模糊纯色硬边偏移阴影 (3px 3px 0px #A3C9AE)，贯穿引用块、Callout、代码块与按钮。"),
+            ("阅读态 / 编辑态双模式字体分离 + 粗体三重强化", "阅读态调用锐利现代印刷黑体（vivo Sans），编辑态切为 2:1 等距打字机体（Sarasa Mono Slab SC）；粗体叠加 750 ExtraBold、深墨松绿字色与 1.5px 细压线。"),
+        ],
+        "table": {
+            "heading": "官方主题商店「简装版」 vs 船板「全装字体版」核心区别",
+            "headers": ["对比维度", "官方商店简装版（搜 chuanban-green）", "船板全装字体版（见资源下载页）"],
+            "rows": [
+                ["包含内容", "仅纯 CSS 主题本体（受官方规范限制不含字体文件）", "完整 v1.0.5 主题包 + 9 字重 vivo Sans 全家桶 + 更纱等距字体拆分包"],
+                ["阅读模式字体", "自动回退至系统黑体（冬青黑体 / 微软雅黑）", "满血调用 vivo Sans（400 / 750 ExtraBold / 850 Heavy），100% 复现印张效果"],
+                ["编辑/源码字体", "回退至系统等宽 + 苹方 / 微软雅黑", "满血调用 Sarasa Mono Slab SC，中英文严格 2:1 等距打字机手稿台体验"],
+                ["适用人群", "想 10 秒即装即用、或已有自定义字体的用户", "想零折腾一次性配齐全部推荐字体、还原展示图满血效果的用户"],
+            ],
+        },
+        "install_blocks": [
+            {
+                "title": "极简安装：Obsidian 官方商店搜索 chuanban-green（简装版）",
+                "desc": "字体安装到系统字库后完全退出并重启 Obsidian，主题内置 @font-face 探针会自动识别接管，无需手工填写字体名。",
+                "code_label": "OBSIDIAN STORE · 安装与个性化调节",
+                "code": """1. 打开 Obsidian → 设置 (Settings) → 外观 (Appearance) → 主题 (Themes) → 管理 (Manage)
+2. 搜索：chuanban-green → 点击「安装并使用」
+3. (可选) 安装社区插件 Style Settings → 进入 chuanban-green (松绿记事本)，自由切换激活 Tab 配色（竹青浓绿 ⇄ 深松墨绿）、三套正文字体预设与硬边阴影偏移。""",
+            }
+        ],
+        "callout": "<strong>安装提示：</strong>若下载全装版中的 <code>vivo Sans</code>（9 字重）与 <code>Sarasa Mono Slab SC</code> 字体包，安装进系统字体册后请<strong>完全退出并重启 Obsidian</strong>，主题将自动探针接管。",
+        "download_intro": "提供 Obsidian 官方商店简装版、GitHub Release (v1.0.5) 主题包，以及含 9 字重 vivo Sans 全家桶 + 更纱等距字体的全装下载入口。",
+        "downloads": [
+            {
+                "name": "主题本体 · chuanban-green (v1.0.5)",
+                "meta": "v1.0.5 · 已上架 Obsidian 官方商店",
+                "desc": "支持在 Obsidian 主题商店直接搜索 chuanban-green 安装，或从 GitHub Release 下载离线 theme.css / 完整源码包。",
+                "mirrors": [
+                    ("GitHub Release (1.0.5)", "GITHUB", "https://github.com/Anarcadia/chuanban-highcontrast-green/releases/tag/1.0.5", True),
+                    ("GitHub 源码包直下 (.zip)", "ZIP", "https://github.com/Anarcadia/chuanban-highcontrast-green/archive/refs/tags/1.0.5.zip", False),
+                    ("飞书国内免代理下载页", "FEISHU", "https://www.feishu.cn/wiki/ASmww8RaaifwkjkysO6c7t9xnYc", False),
+                ],
+            },
+            {
+                "name": "全套 9 字重推荐字体 · vivo-Sans-Fonts-Full.zip + 更纱等距字体",
+                "meta": "vivo Sans 9 字重 + SarasaMonoSlabSC (v1.0.43)",
+                "desc": "还原展示图 100% 锐利杂志印张（正文 400 / 粗体 750 / 标题 850）与编辑态严格 2:1 打字机等距排版。vivo Sans 全家桶请在飞书免代理下载页直取，更纱包支持三源分流。",
+                "mirrors": [
+                    ("飞书免代理页（含 vivo Sans 全套）", "FEISHU", "https://www.feishu.cn/wiki/ASmww8RaaifwkjkysO6c7t9xnYc", True),
+                    ("更纱字体 · GitHub 镜像直下", "GITHUB", "https://github.com/Anarcadia/chuanban-antigravity-theme-patch/releases/download/fonts-sarasa-v1.0.43/Windows-Sarasa-Split-SC-TTF-v1.0.43.zip", False),
+                    ("更纱字体 · Google Drive 分流", "DRIVE", "https://drive.google.com/file/d/1iVVvZXtwUcDiHy42tJ25X6N-JlOf3l7A/view?usp=sharing", False),
+                ],
+            },
+        ],
+        "download_commands": [
+            ("手动放入 Obsidian 主题目录路径", "<你的Vault>/.obsidian/themes/chuanban-green/"),
+        ],
+    },
+    {
         "slug": "obsidian-notion-hc",
         "title": "仿 Notion Obsidian 高对比浅/暗主题",
-        "en_subtitle": "Notion-Like High Contrast Light & Dark Theme for Obsidian",
+        "en_subtitle": "A minimalist black-and-white ink-on-paper print-style Obsidian theme, rebuilt after Notion's High Contrast theme.",
         "version": "v0.3.2",
-        "badges": ["v0.3.2", "Obsidian 独立皮肤", "浅 / 暗高对比", "开源"],
-        "summary": "基于 Minimal 重构的独立高对比皮肤，还原 Notion 最新版白天与黑夜实线网格及选中/悬停双态分层，不锁死原生字体设置（暂未上架官方市场，支持离线包直接安装）。",
-        "lead": "一个基于 Minimal 骨架深度重构的 Obsidian 独立高对比皮肤，用于在 Obsidian 中还原 Notion 最新版黑白高对比（High Contrast）的白天与黑夜双模式界面。",
+        "tags": {
+            "distribution": ["GitHub MIT"],
+            "platform": "Obsidian",
+            "kind": "皮肤",
+        },
+        "summary": "模仿 Notion 黑白高对比主题重构的 Obsidian 极简黑白印刷风格主题，清晰明快的黑白高对比字体和圆角矩形、直线 UI 线条，给你既不会分心，又不会视觉疲劳的清爽体验。",
+        "lead": "模仿 Notion 黑白高对比主题重构的 Obsidian 极简黑白印刷风格主题，清晰明快的黑白高对比字体和圆角矩形、直线 UI 线条，给你既不会分心，又不会视觉疲劳的清爽体验。（支持白天与黑夜双模式实线网格及选中/悬停双态分层，不锁死原生字体设置。）",
         "thumb": "/assets/projects/notion-obsidian/01-light-overview.webp",
         "github_url": "https://github.com/Anarcadia/chuanban-notionlikeHC",
         "github_label": "Anarcadia/chuanban-notionlikeHC",
@@ -210,11 +295,15 @@ git clone https://github.com/Anarcadia/chuanban-notionlikeHC.git
     {
         "slug": "dsh-writing-suite",
         "title": "DSH 写作主题综合包",
-        "en_subtitle": "DeepSeek Harness Warm-Paper Theme (v0.1.2) + Pure Writing Mode (v0.3.0)",
+        "en_subtitle": "My DeepSeek Harness writing workbench: a muted-gold textured theme and a pure writing environment plugin that clears built-in prompts or injects pro-writer and uncensored creative prompts.",
         "version": "v0.1.2 + v0.3.0",
-        "badges": ["theme v0.1.2", "writingset v0.3.0", "DeepSeek Harness", "二合一插件套件"],
-        "summary": "DeepSeek Harness 二合一写作工作台：暖纸皮肤内嵌三款 Anthropic 可变字体开箱即用；纯净写作模式清零编程提示词、收束为写作读写/整理/Word 双向桥工具集。",
-        "lead": "为 DeepSeek Harness (DSH) 打造的「沉浸写作内核 + 仿 Claude Desktop 暖纸阅读皮肤」二合一组合套件。两个插件既可一键组合安装，也可各自独立启停、随时热切换恢复官方原貌。",
+        "tags": {
+            "distribution": ["GitHub CC BY-NC-SA 4.0"],
+            "platform": "DeepSeek Harness",
+            "kind": "一体化环境包",
+        },
+        "summary": "我的 DeepSeek Harness 写作台，包含暗金色质感皮肤和纯净写作环境插件——可把内置提示词清零或者植入专业作家、破限提示词等等。",
+        "lead": "我的 DeepSeek Harness 写作台，包含暗金色质感皮肤和纯净写作环境插件——可把内置提示词清零或者植入专业作家、破限提示词等等。",
         "thumb": "/assets/projects/dsh-writing/screenshot-preview.webp",
         "github_url": "https://github.com/Anarcadia/chuanban-dsh-theme",
         "github_label": "Anarcadia/chuanban-dsh-theme",
@@ -295,7 +384,11 @@ https://github.com/Anarcadia/chuanban-dsh-writingset/releases/latest/download/ch
         "title": "书卷风 Obsidian 主题",
         "en_subtitle": "Warm Ivory & Oatmeal Literary Theme (Official Lite v1.0.4 & Full Suite)",
         "version": "v1.0.4 / 全装套件",
-        "badges": ["官方商店 v1.0.4", "全装套件 v1.0.0", "Obsidian", "双排版预设"],
+        "tags": {
+            "distribution": ["GitHub CC BY-NC-SA 4.0", "全功能私人安装包"],
+            "platform": "Obsidian",
+            "kind": "皮肤",
+        },
         "summary": "暖白象牙 × 燕麦纸感长文写作皮肤，配陶土强调色与高密度悬浮预览卡。简装版可在 Obsidian 官方商店搜 chuanban 直接安装；下载页提供含切换插件与全套字体的离线全装版。",
         "lead": "专为小说作者、专栏作家与深度长文写作者打磨的暖白象牙 × 燕麦纸感书卷风 Obsidian 主题，融合微暖纸面、陶土强调色、活字微润墨质感与固定高信息量悬浮预览卡。",
         "thumb": "/assets/projects/chuanban-obsidian/screenshot.webp",
@@ -375,78 +468,6 @@ https://github.com/Anarcadia/chuanban-dsh-writingset/releases/latest/download/ch
             ("全装套件解压后自动无损部署", "python3 install_auto.py"),
         ],
     },
-    {
-        "slug": "obsidian-chuanban-green",
-        "title": "松绿记事本 · Obsidian 主题",
-        "en_subtitle": "Botanical Editorial Neo-Brutalism Theme (Official Lite v1.0.5 & Full Fonts)",
-        "version": "v1.0.5 / 全装字体包",
-        "badges": ["官方商店 v1.0.5", "0px 直角网格", "双模式字体分离", "Obsidian"],
-        "summary": "植物编辑风 × 新粗野主义皮肤：全域 0px 直角、1px 炭黑网格、硬边偏移阴影与阅读/编辑双模式字体分离。简装版可在官方商店搜 chuanban-green 安装；下载页提供完整主题与 vivo Sans / 更纱全装字体包。",
-        "lead": "chuanban-green（松绿记事本）是一款「植物编辑风 × 新粗野主义（Botanical Editorial Neo-Brutalism）」Obsidian 主题：全域 0px 锐利直角、1px 炭黑外露网格、三阶暖色印刷纸底、竹青/深松硬边偏移阴影，以及阅读态印刷黑体 ⇄ 编辑态等距打字机体双模式字体分离设计。",
-        "thumb": "/assets/projects/chuanban-green/screenshot.webp",
-        "github_url": "https://github.com/Anarcadia/chuanban-highcontrast-green",
-        "github_label": "Anarcadia/chuanban-highcontrast-green",
-        "extra_links": [],
-        "feishu_doc_url": "https://www.feishu.cn/wiki/OftdwaNjBidHBgk9siQcDmNlnBg",
-        "feishu_dl_url": "https://www.feishu.cn/wiki/ASmww8RaaifwkjkysO6c7t9xnYc",
-        "gallery": [
-            ("/assets/projects/chuanban-green/screenshot.webp", "1. 主界面实机展示（满血 vivo Sans 印刷黑体 + Sarasa Mono Slab SC 等距打字机效果）"),
-            ("/assets/projects/chuanban-green/screenshot-overview.webp", "2. 界面视觉与瑞士网格设计细节图解"),
-        ],
-        "features": [
-            ("全域 0px 纯直角与 1px 炭黑外露网格", "彻底移除圆角与弧脚，所有 Tab、按钮、输入框与弹窗均为干脆利落的直角矩形；1px solid #181B18 实线贯穿切分左右侧栏、Tab、大纲与表格，重现瑞士网格秩序感。"),
-            ("三阶暖色印刷纸底拉开空间景深", "中央道林浅灰纸 (#ECEAE2) → 侧栏旧报刊中暖灰 (#E2DFD5) → 右上大纲亚麻深暖灰 (#D6D2C6)，无需阴影模糊即可自然区分工作区层级。"),
-            ("松绿强调色 + 3px 纯色硬边阴影", "竹青浓绿 (#78AB88) / 深松墨绿 (#26593F) 搭配零模糊纯色硬边偏移阴影 (3px 3px 0px #A3C9AE)，贯穿引用块、Callout、代码块与按钮。"),
-            ("阅读态 / 编辑态双模式字体分离 + 粗体三重强化", "阅读态调用锐利现代印刷黑体（vivo Sans），编辑态切为 2:1 等距打字机体（Sarasa Mono Slab SC）；粗体叠加 750 ExtraBold、深墨松绿字色与 1.5px 细压线。"),
-        ],
-        "table": {
-            "heading": "官方主题商店「简装版」 vs 船板「全装字体版」核心区别",
-            "headers": ["对比维度", "官方商店简装版（搜 chuanban-green）", "船板全装字体版（见资源下载页）"],
-            "rows": [
-                ["包含内容", "仅纯 CSS 主题本体（受官方规范限制不含字体文件）", "完整 v1.0.5 主题包 + 9 字重 vivo Sans 全家桶 + 更纱等距字体拆分包"],
-                ["阅读模式字体", "自动回退至系统黑体（冬青黑体 / 微软雅黑）", "满血调用 vivo Sans（400 / 750 ExtraBold / 850 Heavy），100% 复现印张效果"],
-                ["编辑/源码字体", "回退至系统等宽 + 苹方 / 微软雅黑", "满血调用 Sarasa Mono Slab SC，中英文严格 2:1 等距打字机手稿台体验"],
-                ["适用人群", "想 10 秒即装即用、或已有自定义字体的用户", "想零折腾一次性配齐全部推荐字体、还原展示图满血效果的用户"],
-            ],
-        },
-        "install_blocks": [
-            {
-                "title": "极简安装：Obsidian 官方商店搜索 chuanban-green（简装版）",
-                "desc": "字体安装到系统字库后完全退出并重启 Obsidian，主题内置 @font-face 探针会自动识别接管，无需手工填写字体名。",
-                "code_label": "OBSIDIAN STORE · 安装与个性化调节",
-                "code": """1. 打开 Obsidian → 设置 (Settings) → 外观 (Appearance) → 主题 (Themes) → 管理 (Manage)
-2. 搜索：chuanban-green → 点击「安装并使用」
-3. (可选) 安装社区插件 Style Settings → 进入 chuanban-green (松绿记事本)，自由切换激活 Tab 配色（竹青浓绿 ⇄ 深松墨绿）、三套正文字体预设与硬边阴影偏移。""",
-            }
-        ],
-        "callout": "<strong>安装提示：</strong>若下载全装版中的 <code>vivo Sans</code>（9 字重）与 <code>Sarasa Mono Slab SC</code> 字体包，安装进系统字体册后请<strong>完全退出并重启 Obsidian</strong>，主题将自动探针接管。",
-        "download_intro": "提供 Obsidian 官方商店简装版、GitHub Release (v1.0.5) 主题包，以及含 9 字重 vivo Sans 全家桶 + 更纱等距字体的全装下载入口。",
-        "downloads": [
-            {
-                "name": "主题本体 · chuanban-green (v1.0.5)",
-                "meta": "v1.0.5 · 已上架 Obsidian 官方商店",
-                "desc": "支持在 Obsidian 主题商店直接搜索 chuanban-green 安装，或从 GitHub Release 下载离线 theme.css / 完整源码包。",
-                "mirrors": [
-                    ("GitHub Release (1.0.5)", "GITHUB", "https://github.com/Anarcadia/chuanban-highcontrast-green/releases/tag/1.0.5", True),
-                    ("GitHub 源码包直下 (.zip)", "ZIP", "https://github.com/Anarcadia/chuanban-highcontrast-green/archive/refs/tags/1.0.5.zip", False),
-                    ("飞书国内免代理下载页", "FEISHU", "https://www.feishu.cn/wiki/ASmww8RaaifwkjkysO6c7t9xnYc", False),
-                ],
-            },
-            {
-                "name": "全套 9 字重推荐字体 · vivo-Sans-Fonts-Full.zip + 更纱等距字体",
-                "meta": "vivo Sans 9 字重 + SarasaMonoSlabSC (v1.0.43)",
-                "desc": "还原展示图 100% 锐利杂志印张（正文 400 / 粗体 750 / 标题 850）与编辑态严格 2:1 打字机等距排版。vivo Sans 全家桶请在飞书免代理下载页直取，更纱包支持三源分流。",
-                "mirrors": [
-                    ("飞书免代理页（含 vivo Sans 全套）", "FEISHU", "https://www.feishu.cn/wiki/ASmww8RaaifwkjkysO6c7t9xnYc", True),
-                    ("更纱字体 · GitHub 镜像直下", "GITHUB", "https://github.com/Anarcadia/chuanban-antigravity-theme-patch/releases/download/fonts-sarasa-v1.0.43/Windows-Sarasa-Split-SC-TTF-v1.0.43.zip", False),
-                    ("更纱字体 · Google Drive 分流", "DRIVE", "https://drive.google.com/file/d/1iVVvZXtwUcDiHy42tJ25X6N-JlOf3l7A/view?usp=sharing", False),
-                ],
-            },
-        ],
-        "download_commands": [
-            ("手动放入 Obsidian 主题目录路径", "<你的Vault>/.obsidian/themes/chuanban-green/"),
-        ],
-    },
 ]
 
 SKILLS = [
@@ -454,7 +475,11 @@ SKILLS = [
         "title": "网文拆书分析 Skills",
         "repo_name": "Anarcadia/chuanban-chaishu-skills",
         "url": "https://github.com/Anarcadia/chuanban-chaishu-skills",
-        "badges": ["Claude Code Skill", "长篇拆书基座", "防幻觉全景图"],
+        "tags": {
+            "distribution": ["GitHub CC BY-NC-SA 4.0"],
+            "platform": "通用 Agent",
+            "kind": "工作流 Skill",
+        },
         "paragraphs": [
             "小说拆书 Skill 基座，为 Claude Code 适配。",
             "本意为建立长篇小说真实、可信、无幻觉的全景图（以细颗粒度的章节概要组成），而非执行花里胡哨的小说创作维度的分析（诸如节奏、爽点分层、情绪等）。个人对这些高层次分析并不信任，所以并没去花力气开发，只建立了基于最简单判定规则的 ABC 三类爽点判断。",
@@ -465,7 +490,11 @@ SKILLS = [
         "title": "仿 Perplexity 杂志风本地深度研究",
         "repo_name": "Anarcadia/local-deep-research-perplexity-magazine-style",
         "url": "https://github.com/Anarcadia/local-deep-research-perplexity-magazine-style",
-        "badges": ["Deep Research Skill", "多源搜索", "杂志可读性"],
+        "tags": {
+            "distribution": ["GitHub CC BY-NC-SA 4.0"],
+            "platform": "通用 Agent",
+            "kind": "工作流 Skill",
+        },
         "paragraphs": [
             "手搓的模仿 Perplexity 的深度研究文章创作流程。主要使用 Codex 逆向分析 Perplexity 网页 Deep Research Agent 的调研流程行为模式得出调研部分机制，而撰写部分则由自己选定符合口味的模型和提示词确定风格。",
             "这个 Skill 的目的不是去做严谨、学术化、以最高可验证性和准确率为目标的学术型 Deep Research（所以不适合给学术用户或专业研报使用），而是为了写出一般人易读、爱读的知识性文章，让读者获得优质的学习与阅读体验，避免受到严重的 AI 写作风味干扰。",
@@ -476,7 +505,11 @@ SKILLS = [
         "title": "日语长篇小说精翻工作流",
         "repo_name": "Anarcadia/chuanban-jp-novel-translator",
         "url": "https://github.com/Anarcadia/chuanban-jp-novel-translator",
-        "badges": ["Claude Code Skills", "主调度 + Sub-agent", "200万字实战"],
+        "tags": {
+            "distribution": ["GitHub CC BY-NC-SA 4.0"],
+            "platform": "通用 Agent",
+            "kind": "工作流 Skill",
+        },
         "paragraphs": [
             "日语小说精翻流程。长期作为个人译者自 DIY、自维护使用，实际已完成翻译超过 10 本小说、累计 200 万字，主要使用 Claude Opus 4.6 与 DeepSeek V4 Pro 执行翻译，成稿效果令人满意。",
             "目前正在制作适配 Proma 的新版本，重点优化子进程模型调用以及术语表一致性规则。",
@@ -485,8 +518,118 @@ SKILLS = [
 ]
 
 
+# 检验标签白名单与扩展说明：
+# 1. distribution（多选）："GitHub <开源协议>"（如 "GitHub MIT" / "GitHub CC BY-NC-SA 4.0"）/ "全功能私人安装包"
+# 2. platform（单选）："Antigravity" / "Obsidian" / "DeepSeek Harness" / "通用 Agent"（支持未来随时扩展新平台）
+# 3. kind（单选）："皮肤" / "工作流 Skill" / "一体化环境包"
+VALID_KINDS = {"皮肤", "工作流 Skill", "一体化环境包"}
+
+# 真实品牌图标（本地静态资源）与通用表意矢量图标（Inline SVG）
+PLATFORM_IMG_ICONS = {
+    "Antigravity": "/assets/projects/icons/antigravity.png",
+    "Obsidian": "/assets/projects/icons/obsidian.png",
+    "DeepSeek Harness": "/assets/projects/icons/dsh.png",
+}
+
+SVG_GENERIC_AGENT = (
+    '<span class="badge-icon" aria-hidden="true">'
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'
+    '<path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>'
+    '<path d="M20 3v4"/><path d="M22 5h-4"/>'
+    '</svg></span>'
+)
+
+SVG_GENERIC_PLATFORM = (
+    '<span class="badge-icon" aria-hidden="true">'
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'
+    '<rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 20h8"/><path d="M12 18v2"/>'
+    '</svg></span>'
+)
+
+KIND_SVG_ICONS = {
+    "皮肤": (
+        '<span class="badge-icon" aria-hidden="true">'
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'
+        '<circle cx="13.5" cy="6.5" r=".6" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".6" fill="currentColor"/>'
+        '<circle cx="8.5" cy="7.5" r=".6" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".6" fill="currentColor"/>'
+        '<path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/>'
+        '</svg></span>'
+    ),
+    "工作流 Skill": (
+        '<span class="badge-icon" aria-hidden="true">'
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'
+        '<rect x="3" y="3" width="6" height="6" rx="1"/><rect x="15" y="15" width="6" height="6" rx="1"/>'
+        '<rect x="15" y="3" width="6" height="6" rx="1"/><path d="M9 6h6"/><path d="M6 9v6a3 3 0 0 0 3 3h6"/>'
+        '</svg></span>'
+    ),
+    "一体化环境包": (
+        '<span class="badge-icon" aria-hidden="true">'
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'
+        '<path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/>'
+        '<path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/>'
+        '<path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/>'
+        '</svg></span>'
+    ),
+}
+
+SVG_GITHUB = (
+    '<span class="badge-icon" aria-hidden="true">'
+    '<svg viewBox="0 0 24 24" fill="currentColor">'
+    '<path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>'
+    '</svg></span>'
+)
+
+SVG_PRIVATE_PKG = (
+    '<span class="badge-icon" aria-hidden="true">'
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'
+    '<path d="M16.5 9.4 7.55 4.24"/>'
+    '<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>'
+    '<polyline points="3.29 7 12 12 20.71 7"/><line x1="12" y1="22" x2="12" y2="12"/>'
+    '</svg></span>'
+)
+
+
 def e(text: str) -> str:
     return html.escape(text, quote=True)
+
+
+def render_tags(tags: dict) -> str:
+    platform = str(tags.get("platform") or "").strip()
+    kind = str(tags.get("kind") or "").strip()
+    dists = list(tags.get("distribution") or [])
+    if not platform:
+        raise ValueError("Project tag missing required single-select 'platform'")
+    if kind not in VALID_KINDS:
+        raise ValueError(f"Invalid project kind: {kind!r}; expected one of {VALID_KINDS}")
+    if not dists or any(
+        d != "全功能私人安装包" and not d.startswith("GitHub ")
+        for d in dists
+    ):
+        raise ValueError(f"Invalid project distribution: {dists!r}; expected 'GitHub <LICENSE>' or '全功能私人安装包'")
+
+    if platform in PLATFORM_IMG_ICONS:
+        p_icon = f'<img class="badge-icon-img" src="{PLATFORM_IMG_ICONS[platform]}" alt="" width="15" height="15" decoding="async" />'
+    elif platform == "通用 Agent":
+        p_icon = SVG_GENERIC_AGENT
+    else:
+        p_icon = SVG_GENERIC_PLATFORM
+
+    k_icon = KIND_SVG_ICONS[kind]
+
+    items = [
+        f'<span class="badge badge--platform" title="面向平台：{e(platform)}">{p_icon}<span>{e(platform)}</span></span>',
+        f'<span class="badge badge--kind" title="工具属性：{e(kind)}">{k_icon}<span>{e(kind)}</span></span>',
+    ]
+    for d in dists:
+        if d == "全功能私人安装包":
+            items.append(
+                f'<span class="badge badge--cinnabar" title="分发形态：GitHub 之外额外提供全功能私人安装包">{SVG_PRIVATE_PKG}<span>含全功能私人安装包</span></span>'
+            )
+        else:
+            items.append(
+                f'<span class="badge badge--open" title="分发形态：{e(d)}">{SVG_GITHUB}<span>{e(d)}</span></span>'
+            )
+    return "".join(items)
 
 
 def render_shell(
@@ -494,10 +637,15 @@ def render_shell(
     title: str,
     description: str,
     canonical: str,
-    back_href: str,
+    back_href: str | None,
     back_label: str,
     body_html: str,
 ) -> str:
+    top_back_html = (
+        f'\n        <a href="{e(back_href)}" class="nav-back"><span class="arrow-glyph">←</span> {e(back_label)}</a>'
+        if back_href and back_label
+        else ""
+    )
     return f"""<!DOCTYPE html>
 <html lang="zh-Hans">
 <head>
@@ -515,7 +663,7 @@ def render_shell(
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/projects/projects.css" />
+  <link rel="stylesheet" href="/assets/projects/projects.css?v=20261126c" />
 </head>
 <body>
 {XUAN_SVG}
@@ -526,8 +674,7 @@ def render_shell(
         <span class="cinnabar-seal" title="船板">船</span>
         <span class="seal-caption">THE PLANK OF THESEUS</span>
       </a>
-      <div class="utility-actions">
-        <a href="{e(back_href)}" class="nav-back"><span class="arrow-glyph">←</span> {e(back_label)}</a>
+      <div class="utility-actions">{top_back_html}
         <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle Ink Mode">夜砚 · Ink</button>
       </div>
     </header>
@@ -551,14 +698,14 @@ def render_shell(
 def build_index() -> str:
     tool_rows = []
     for t in TOOLS:
-        badges_html = "".join(
-            f'<span class="badge{" badge--cinnabar" if i == 0 else ""}">{e(b)}</span>'
-            for i, b in enumerate(t["badges"])
-        )
+        badges_html = render_tags(t["tags"])
+        data_platform = e(t["tags"]["platform"])
+        data_kind = e(t["tags"]["kind"])
+        data_dist = e(",".join(t["tags"]["distribution"]))
         detail_url = f"/projects/{t['slug']}/"
         dl_url = f"/projects/{t['slug']}/download/"
         tool_rows.append(
-            f"""          <article class="tool-row">
+            f"""          <article class="tool-row" data-platform="{data_platform}" data-kind="{data_kind}" data-dist="{data_dist}">
             <a class="tool-thumb-link" href="{detail_url}" aria-label="查看 {e(t['title'])} 介绍">
               <div class="tool-thumb-mat">
                 <img src="{t['thumb']}" alt="{e(t['title'])} 实机截图" loading="lazy" decoding="async" />
@@ -580,10 +727,13 @@ def build_index() -> str:
 
     skill_rows = []
     for s in SKILLS:
-        badges_html = "".join(f'<span class="badge">{e(b)}</span>' for b in s["badges"])
+        badges_html = render_tags(s["tags"])
+        data_platform = e(s["tags"]["platform"])
+        data_kind = e(s["tags"]["kind"])
+        data_dist = e(",".join(s["tags"]["distribution"]))
         paras_html = "\n".join(f"              <p>{e(p)}</p>" for p in s["paragraphs"])
         skill_rows.append(
-            f"""          <article class="skill-item">
+            f"""          <article class="skill-item" data-platform="{data_platform}" data-kind="{data_kind}" data-dist="{data_dist}">
             <div class="skill-meta">
               <div class="tool-badges">{badges_html}</div>
               <h3 class="skill-name">{e(s['title'])}</h3>
@@ -597,9 +747,12 @@ def build_index() -> str:
         )
 
     body = f"""      <section class="page-masthead" aria-label="Projects Title Banner">
-        <h1 class="page-title">My Project</h1>
+        <a href="/" class="page-back-btn" aria-label="Back to The Plank of Theseus 主页">
+          <span class="page-back-arrow" aria-hidden="true">←</span>
+          <span>Back</span>
+        </a>
         <div class="page-side">
-          <p class="page-zh">船板写作工具集</p>
+          <h1 class="page-zh">船板写作工具集</h1>
           <p class="page-meta">PLANKOFTHESEUS.COM / PROJECTS</p>
         </div>
       </section>
@@ -607,10 +760,10 @@ def build_index() -> str:
       <section class="intro-band" aria-label="Collection Overview">
         <div class="intro-inner">
           <p class="intro-en">
-            Self-crafted client themes, pure-writing workbenches, and AI long-form Skills — built to keep the human hand on the helm.
+            Writing workflows, Skills, themes, and handy utilities — built and used daily by Chuanban.
           </p>
           <p class="intro-zh">
-            收录船板自用并开源的客户端美化皮肤、写作模式插件与 AI 长文生产工作流。每款工具均配独立图文介绍页与多源下载页（GitHub Releases / Google Drive / 飞书国内免代理分流）。
+            船板亲自使用、开发的写作工作流、Skill、皮肤和便利化小工具。
           </p>
         </div>
       </section>
@@ -643,20 +796,17 @@ def build_index() -> str:
 
     return render_shell(
         title="My Project · 船板写作工具集 — The Plank of Theseus",
-        description="船板自用并开源的客户端美化皮肤、Obsidian 与 DSH 写作套件、以及 AI 长篇创作与研究工作流 Skills 合集。",
+        description="船板亲自使用、开发的写作工作流、Skill、皮肤和便利化小工具。 (Writing workflows, Skills, themes, and handy utilities — built and used daily by Chuanban.)",
         canonical="https://plankoftheseus.com/projects/",
-        back_href="/",
-        back_label="返回主页",
+        back_href=None,
+        back_label="",
         body_html=body,
     )
 
 
 def build_detail(idx: int, t: dict) -> str:
     dl_url = f"/projects/{t['slug']}/download/"
-    badges_html = "".join(
-        f'<span class="badge{" badge--cinnabar" if i == 0 else ""}">{e(b)}</span>'
-        for i, b in enumerate(t["badges"])
-    )
+    badges_html = render_tags(t["tags"])
     extra_btns = "".join(
         f'<a class="btn" href="{e(url)}" target="_blank" rel="noopener">{e(label)} <span class="arrow-glyph">↗</span></a>'
         for label, url in t["extra_links"]
@@ -789,7 +939,7 @@ def build_detail(idx: int, t: dict) -> str:
 
     return render_shell(
         title=f"{t['title']} ({t['version']}) — My Project · The Plank of Theseus",
-        description=t["summary"],
+        description=t.get("seo_description") or t["summary"],
         canonical=f"https://plankoftheseus.com/projects/{t['slug']}/",
         back_href="/projects/",
         back_label="返回工具集",
